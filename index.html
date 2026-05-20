@@ -41,7 +41,10 @@
             <div class="hero-left-copy">
               <p class="hero-side-text">Access high-quality pieces from Lisbon wardrobes,<br />independent designers, and curated shops.</p>
               <p class="hero-anchor-text">WEAR MORE<br />OWN LESS</p>
-              <form class="hero-waitlist" action="#" method="post" aria-label="Join waitlist">
+              <form class="hero-waitlist" action="https://api.web3forms.com/submit" method="POST" aria-label="Join waitlist">
+                <input type="hidden" name="access_key" value="" />
+                <input type="hidden" name="redirect" value="/success.html" />
+                <input type="hidden" name="botcheck" style="display: none;" />
                 <label class="sr-only" for="hero-email">Email address</label>
                 <input id="hero-email" class="hero-email-input" type="email" name="email" placeholder="Enter your email" required />
                 <button class="hero-waitlist-btn" type="submit">Join Waitlist</button>
@@ -99,10 +102,10 @@
           <svg class="how-connector-svg how-connector-svg-desktop" viewBox="0 0 220 760" preserveAspectRatio="xMidYMid meet" aria-hidden="true" focusable="false">
             <defs>
               <linearGradient id="howPathFadeDesktop" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="0" stop-color="rgba(239,194,200,0)" />
-                <stop offset="0.12" stop-color="rgba(239,194,200,0.82)" />
-                <stop offset="0.88" stop-color="rgba(239,194,200,0.82)" />
-                <stop offset="1" stop-color="rgba(239,194,200,0)" />
+                <stop offset="0" stop-color="var(--accent-pale)" stop-opacity="0" />
+                <stop offset="0.12" stop-color="var(--accent-pale)" stop-opacity="0.82" />
+                <stop offset="0.88" stop-color="var(--accent-pale)" stop-opacity="0.82" />
+                <stop offset="1" stop-color="var(--accent-pale)" stop-opacity="0" />
               </linearGradient>
             </defs>
             <path class="how-path" style="stroke:url(#howPathFadeDesktop);" d="M80 -20 C210 127 210 633 80 780" />
@@ -123,10 +126,10 @@
           <svg class="how-connector-svg how-connector-svg-mobile" viewBox="0 0 120 540" preserveAspectRatio="xMidYMid meet" aria-hidden="true" focusable="false">
             <defs>
               <linearGradient id="howPathFadeMobile" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="0" stop-color="rgba(239,194,200,0)" />
-                <stop offset="0.14" stop-color="rgba(239,194,200,0.82)" />
-                <stop offset="0.86" stop-color="rgba(239,194,200,0.82)" />
-                <stop offset="1" stop-color="rgba(239,194,200,0)" />
+                <stop offset="0" stop-color="var(--accent-pale)" stop-opacity="0" />
+                <stop offset="0.14" stop-color="var(--accent-pale)" stop-opacity="0.82" />
+                <stop offset="0.86" stop-color="var(--accent-pale)" stop-opacity="0.82" />
+                <stop offset="1" stop-color="var(--accent-pale)" stop-opacity="0" />
               </linearGradient>
             </defs>
             <path class="how-path" style="stroke:url(#howPathFadeMobile);" d="M38 -20 C114 90 114 450 38 560" />
@@ -230,39 +233,41 @@
   <!-- Footer -->
   <footer class="site-footer section-dark fade-section" id="hit-me-up">
     <div class="container footer-shell">
-      <h2 class="footer-headline">
-        <span>THANK YOU</span>
-        <span>FOR VIEWING</span>
-      </h2>
+      <div class="footer-upper">
+        <h2 class="footer-headline">
+          <span>SHARED WARDROBE</span>
+          <span>PERSONAL STYLE</span>
+        </h2>
 
-      <div class="footer-stage">
-        <div class="footer-left">
-          <form class="footer-waitlist" action="#" method="post" aria-label="Join waitlist from footer">
-            <label class="sr-only" for="footer-email">Email address</label>
-            <input id="footer-email" class="footer-email-input" type="email" name="email" placeholder="Enter your email" required />
-            <button class="footer-waitlist-btn" type="submit">Join Waitlist</button>
-          </form>
-        </div>
+        <div class="footer-stage">
+          <div class="footer-left">
+            <form class="footer-waitlist" action="https://api.web3forms.com/submit" method="POST" aria-label="Join waitlist from footer">
+              <input type="hidden" name="access_key" value="" />
+              <input type="hidden" name="redirect" value="/success.html" />
+              <input type="hidden" name="botcheck" style="display: none;" />
+              <label class="sr-only" for="footer-email">Email address</label>
+              <input id="footer-email" class="footer-email-input" type="email" name="email" placeholder="Enter your email" required />
+              <button class="footer-waitlist-btn" type="submit">Join Waitlist</button>
+            </form>
+          </div>
+          <div class="footer-right">
+            <nav class="footer-nav" aria-label="Footer navigation">
+              <a href="#home">Home</a>
+              <a href="#how-it-works">How It Works</a>
+              <a href="#browse">Browse</a>
+              <a href="#hit-me-up">Early Access</a>
+            </nav>
 
-        <div class="footer-model-wrap">
-          <img src="assets/images/footer-portrait.png" alt="Footer fashion portrait" class="footer-model" />
-        </div>
-
-        <div class="footer-right">
-          <nav class="footer-nav" aria-label="Footer navigation">
-            <a href="#home">Home</a>
-            <a href="#how-it-works">How It Works</a>
-            <a href="#browse">Browse</a>
-            <a href="#hit-me-up">List a Piece</a>
-          </nav>
-
-          <div class="socials">
-            <a href="#" aria-label="Facebook">f</a>
-            <a href="#" aria-label="Instagram">i</a>
-            <a href="#" aria-label="Twitter">t</a>
-            <a href="#" aria-label="Pinterest">p</a>
+            <div class="socials">
+              <span class="socials-label">FOLLOW US:</span>
+              <a href="#" aria-label="Instagram">i</a>
+            </div>
           </div>
         </div>
+      </div>
+
+      <div class="footer-model-wrap">
+        <img src="assets/images/footer-portrait.png" alt="Footer fashion portrait" class="footer-model" />
       </div>
 
       <p class="footer-glitch" data-text="LOUP">LOUP</p>
@@ -271,8 +276,16 @@
   </footer>
 
   <script src="script.js"></script>
+  <script>
+    document
+      .querySelectorAll('input[name="access_key"]')
+      .forEach((input) => {
+        input.value = "1121d078-1bf1-4bf0-b3af-23e03cf6358b";
+      });
+  </script>
 </body>
 </html>
+
 
 
 
