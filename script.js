@@ -107,29 +107,31 @@ if (carouselTrack && prevBtn && nextBtn) {
 }
 
 // Uniformly scale the Explore showcase so composition remains identical at all widths.
-const showcaseScroll = document.querySelector('.product-showcase-scroll');
-const showcase = document.querySelector('.product-showcase');
 
-if (showcaseScroll && showcase) {
-  const baseShowcaseWidth = 706;
+//const showcaseScroll = document.querySelector('.product-showcase-scroll');
+//const showcase = document.querySelector('.product-showcase');
 
-  const updateShowcaseScale = () => {
-    const availableWidth = showcaseScroll.clientWidth;
-    const scale = Math.min(1, availableWidth / baseShowcaseWidth);
-    showcaseScroll.style.setProperty('--showcase-scale', String(scale));
+//if (showcaseScroll && showcase) {
+//  const baseShowcaseWidth = 706;
+
+  //const updateShowcaseScale = () => {
+    ////const availableWidth = showcaseScroll.clientWidth;
+    //const availableWidth = showcaseScroll.getBoundingClientRect().width;
+    //const scale = Math.min(1, availableWidth / baseShowcaseWidth);
+    //showcaseScroll.style.setProperty('--showcase-scale', String(scale));
 
     // Ensure wrapper grows/shrinks with the transformed content to avoid clipping.
-    const scaledHeight = showcase.offsetHeight * scale;
-    showcaseScroll.style.height = `${Math.ceil(scaledHeight)}px`;
-  };
+    // Add bottom padding (52px) into height so the drop-shadow doesn't get cut off.
+    //const scaledHeight = showcase.offsetHeight * scale;
+    //showcaseScroll.style.height = `${Math.ceil(scaledHeight) + 52}px`;
+  //};
 
-  updateShowcaseScale();
-  window.addEventListener('resize', updateShowcaseScale);
-  window.addEventListener('load', updateShowcaseScale);
+  //updateShowcaseScale();
+  //window.addEventListener('resize', updateShowcaseScale);
+  //window.addEventListener('load', updateShowcaseScale);
 
-  if ('ResizeObserver' in window) {
-    const resizeObserver = new ResizeObserver(updateShowcaseScale);
-    resizeObserver.observe(showcaseScroll);
-  }
-}
-
+  //if ('ResizeObserver' in window) {
+    //const resizeObserver = new ResizeObserver(updateShowcaseScale);
+    //resizeObserver.observe(showcaseScroll);
+  //}
+//}
