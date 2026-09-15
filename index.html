@@ -89,8 +89,13 @@
 </div>
 <!-- Waitlist Form -->
 <div class="flex flex-col space-y-4" data-purpose="waitlist-form">
-<form class="flex flex-col sm:flex-row gap-0 border border-brand-outline rounded-brand overflow-hidden bg-white shadow-brand-sm focus-within:ring-1 focus-within:ring-brand-forest transition-all">
-<input class="flex-grow px-6 py-4 border-none focus:ring-0 text-base bg-white font-space-grotesk" placeholder="Enter your email" required="" type="email"/>
+<form class="flex flex-col sm:flex-row gap-0 border border-brand-outline rounded-brand overflow-hidden bg-white shadow-brand-sm focus-within:ring-1 focus-within:ring-brand-forest transition-all" action="https://api.web3forms.com/submit" method="POST" aria-label="Join waitlist">
+<input type="hidden" name="access_key" value="1121d078-1bf1-4bf0-b3af-23e03cf6358b"/>
+<input type="hidden" name="redirect" value="/success.html"/>
+<input type="hidden" name="subject" value="New LOUP waitlist signup"/>
+<input type="checkbox" name="botcheck" class="hidden" style="display:none"/>
+<label class="sr-only" for="hero-email">Email address</label>
+<input id="hero-email" class="flex-grow px-6 py-4 border-none focus:ring-0 text-base bg-white font-space-grotesk" name="email" placeholder="Enter your email" required="" type="email"/>
 <button class="bg-brand-forest text-brand-ivory px-8 py-4 font-semibold hover:bg-brand-forestDeep transition-colors active:scale-95 duration-200 font-space-grotesk" type="submit">
               Join the waitlist
             </button>
