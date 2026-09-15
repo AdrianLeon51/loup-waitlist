@@ -1,0 +1,40 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-forest: #1E3A2C;
+  --color-brand-forestDeep: #12241B;
+  --color-brand-forestSoft: #2F5241;
+  --color-brand-sage: #5C7566;
+  --color-brand-ivory: #FAF7F1;
+  --color-brand-panel: #F1ECE1;
+  --color-brand-outline: #E2DDCE;
+  --color-brand-outlineOnDark: rgba(250, 247, 241, 0.16);
+
+  --font-syne: 'Syne', sans-serif;
+  --font-space-grotesk: 'Space Grotesk', sans-serif;
+
+  --radius-brand: 0.5rem;
+  --radius-xl-brand: 1.25rem;
+
+  --shadow-brand: 0 20px 40px -20px rgba(18, 36, 27, 0.25);
+  --shadow-brand-sm: 0 8px 24px -12px rgba(18, 36, 27, 0.18);
+}
+
+@layer base {
+  body {
+    font-family: 'Space Grotesk', sans-serif;
+    background-color: #FAF7F1;
+    color: #1E3A2C;
+    -webkit-font-smoothing: antialiased;
+  }
+  h1, h2, .logo-text {
+    font-family: 'Syne', sans-serif;
+  }
+  .logo-text {
+    letter-spacing: -0.04em;
+  }
+  .eyebrow {
+    letter-spacing: 0.16em;
+    font-size: 0.72rem;
+  }
+}
