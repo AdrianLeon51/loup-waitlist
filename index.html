@@ -3,69 +3,26 @@
 <html lang="en"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>LOUP. | Fashion freedom, coming to Lisbon</title>
+<title>LOUP. | Premium fashion, circular by design. Lisbon first.</title>
+<meta name="description" content="LOUP helps premium fashion brands, boutiques, and designers enter circular fashion — starting in Lisbon. One trusted wardrobe for events, dinners, travel, and work. Join the waitlist."/>
 <!-- Tailwind CSS CDN -->
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <!-- Google Fonts: Syne & Space Grotesk -->
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&amp;family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
 <script>
     tailwind.config = {
-      darkMode: "class",
       theme: {
         extend: {
           colors: {
-            "surface-container-high": "#292a2a",
-            "error": "#ffb4ab",
-            "on-primary-fixed-variant": "#454747",
-            "tertiary-fixed": "#e4e2e1",
-            "inverse-surface": "#e3e2e2",
-            "surface-dim": "#121314",
-            "on-error": "#690005",
-            "on-secondary-fixed": "#1c1b1b",
-            "surface-container-lowest": "#0d0e0f",
-            "error-container": "#93000a",
-            "surface": "#121314",
-            "primary-fixed": "#e2e2e2",
-            "tertiary-fixed-dim": "#c8c6c5",
-            "primary-container": "#e2e2e2",
-            "on-tertiary-fixed": "#1b1c1c",
-            "on-tertiary-container": "#656464",
-            "inverse-on-surface": "#303031",
-            "on-background": "#e3e2e2",
-            "surface-bright": "#393939",
-            "background": "#121314",
-            "on-primary-fixed": "#1a1c1c",
-            "outline-variant": "#444748",
-            "primary-fixed-dim": "#c6c6c7",
-            "secondary-fixed": "#e5e2e1",
-            "surface-container": "#1f2020",
-            "primary": "#ffffff",
-            "secondary-fixed-dim": "#c8c6c5",
-            "on-secondary-container": "#bab8b7",
-            "tertiary-container": "#e4e2e1",
-            "on-error-container": "#ffdad6",
-            "secondary": "#c8c6c5",
-            "secondary-container": "#4a4949",
-            "inverse-primary": "#5d5f5f",
-            "on-primary": "#2f3131",
-            "surface-container-low": "#1b1c1c",
-            "tertiary": "#ffffff",
-            "on-secondary": "#313030",
-            "surface-tint": "#c6c6c7",
-            "on-tertiary-fixed-variant": "#474746",
-            "on-secondary-fixed-variant": "#474646",
-            "on-surface": "#e3e2e2",
-            "surface-container-highest": "#343535",
-            "surface-variant": "#343535",
-            "on-primary-container": "#636565",
-            "on-tertiary": "#303030",
-            "outline": "#8e9192",
-            "on-surface-variant": "#c4c7c8",
             brand: {
-              black: '#0d0d0d',
-              surface: '#f9f9f9',
-              muted: '#666666',
-              outline: '#e5e5e5'
+              forest: '#1E3A2C',
+              forestDeep: '#12241B',
+              forestSoft: '#2F5241',
+              sage: '#5C7566',
+              ivory: '#FAF7F1',
+              panel: '#F1ECE1',
+              outline: '#E2DDCE',
+              outlineOnDark: 'rgba(250, 247, 241, 0.16)'
             }
           },
           fontFamily: {
@@ -73,8 +30,12 @@
             'space-grotesk': ['Space Grotesk', 'sans-serif'],
           },
           borderRadius: {
-            'brand': '0.125rem',
-            'xl-brand': '0.25rem'
+            'brand': '0.5rem',
+            'xl-brand': '1.25rem'
+          },
+          boxShadow: {
+            'brand': '0 20px 40px -20px rgba(18, 36, 27, 0.25)',
+            'brand-sm': '0 8px 24px -12px rgba(18, 36, 27, 0.18)'
           }
         }
       }
@@ -83,71 +44,72 @@
 <style>
     body {
       font-family: 'Space Grotesk', sans-serif;
-      background-color: #f9f9f9;
-      color: #0d0d0d;
+      background-color: #FAF7F1;
+      color: #1E3A2C;
       -webkit-font-smoothing: antialiased;
     }
     h1, h2, h3, .logo-text {
       font-family: 'Syne', sans-serif;
     }
     .logo-text {
-      letter-spacing: -0.05em;
+      letter-spacing: -0.04em;
     }
-    .sub-logo {
-      letter-spacing: 0.1em;
-      font-size: 0.7rem;
+    .eyebrow {
+      letter-spacing: 0.16em;
+      font-size: 0.72rem;
     }
-  </style>
+</style>
 </head>
 <body class="min-h-screen flex flex-col">
 <!-- BEGIN: TopNavBar -->
 <header class="w-full max-w-screen-2xl mx-auto px-6 md:px-12 py-8 flex justify-between items-center" data-purpose="main-header">
 <div class="flex flex-col" data-purpose="brand-logo">
-<span class="text-3xl font-extrabold logo-text leading-none uppercase">Loup.</span>
-<span class="sub-logo font-bold uppercase mt-1 text-brand-muted">Shared Wardrobe</span>
+<span class="text-3xl font-extrabold logo-text leading-none uppercase text-brand-forest">Loup.</span>
+<span class="eyebrow font-bold uppercase mt-1 text-brand-sage">Circular Fashion &middot; Lisbon</span>
 </div>
 <nav>
-<a class="text-sm font-semibold hover:opacity-70 transition-opacity duration-300 font-space-grotesk" data-purpose="nav-link" href="#">Join waitlist</a>
+<a class="text-sm font-semibold text-brand-forest hover:opacity-70 transition-opacity duration-300 font-space-grotesk" data-purpose="nav-link" href="#waitlist">Join the waitlist</a>
 </nav>
 </header>
 <!-- END: TopNavBar -->
 <!-- BEGIN: MainContent -->
-<main class="flex-grow flex flex-col justify-center w-full max-w-screen-2xl mx-auto px-6 md:px-12">
+<main class="flex-grow flex flex-col w-full max-w-screen-2xl mx-auto px-6 md:px-12">
 <!-- BEGIN: HeroSection -->
-<section class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center py-12 lg:py-20" data-purpose="hero">
+<section class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center py-12 lg:py-20" data-purpose="hero" id="waitlist">
 <!-- Hero Text Content -->
 <div class="flex flex-col space-y-8 max-w-xl">
-<div class="space-y-4">
-<h1 class="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-[1.1]">
-            Fashion freedom, coming to Lisbon.
+<div class="space-y-5">
+<p class="eyebrow font-bold uppercase text-brand-sage">Helping premium brands enter circular fashion &mdash; launching in Lisbon</p>
+<h1 class="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.1] text-brand-forest">
+            The trusted home for premium fashion brands to go circular.
           </h1>
-<p class="text-lg md:text-xl text-brand-muted font-medium max-w-md font-space-grotesk">
-            Curated fashion for the moments you want to show up differently.
+<p class="text-lg md:text-xl text-brand-sage font-medium max-w-md font-space-grotesk">
+            LOUP partners with premium labels, boutiques, and independent designers to bring their pieces into one curated wardrobe &mdash; so style-conscious women in Lisbon can dress for events, dinners, travel, and work without the cost or clutter of buying it all outright.
           </p>
 </div>
 <!-- Waitlist Form -->
 <div class="flex flex-col space-y-4" data-purpose="waitlist-form">
-<form class="flex flex-col sm:flex-row gap-0 border border-brand-outline rounded-brand overflow-hidden focus-within:ring-1 focus-within:ring-brand-black transition-all">
+<form class="flex flex-col sm:flex-row gap-0 border border-brand-outline rounded-brand overflow-hidden bg-white shadow-brand-sm focus-within:ring-1 focus-within:ring-brand-forest transition-all">
 <input class="flex-grow px-6 py-4 border-none focus:ring-0 text-base bg-white font-space-grotesk" placeholder="Enter your email" required="" type="email"/>
-<button class="bg-brand-black text-white px-8 py-4 font-semibold hover:bg-opacity-90 transition-colors active:scale-95 duration-200 font-space-grotesk" type="submit">
+<button class="bg-brand-forest text-brand-ivory px-8 py-4 font-semibold hover:bg-brand-forestDeep transition-colors active:scale-95 duration-200 font-space-grotesk" type="submit">
               Join the waitlist
             </button>
 </form>
 <!-- Trust Element -->
-<div class="flex items-center space-x-2 text-brand-muted text-sm px-1 font-space-grotesk">
+<div class="flex items-center space-x-2 text-brand-sage text-sm px-1 font-space-grotesk">
 <svg fill="none" height="14" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="14" xmlns="http://www.w3.org/2000/svg"><rect height="11" rx="2" ry="2" width="18" x="3" y="11"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
-<span>Be first to know when we launch.</span>
+<span>Be first to know when LOUP opens in Lisbon.</span>
 </div>
 </div>
 </div>
 <!-- Hero Image -->
 <div class="relative w-full aspect-[4/5] lg:aspect-square" data-purpose="hero-image-container">
-<img alt="High-end editorial fashion photography, minimal aesthetic" class="w-full h-full object-cover rounded-xl-brand shadow-sm" src="assets/images/hero.jpg"/>
+<img alt="Elegant editorial fashion photography, calm and premium aesthetic" class="w-full h-full object-cover rounded-xl-brand shadow-brand" src="assets/images/hero.jpg"/>
 <!-- Decorative subtle icon/logo overlay -->
-<div class="absolute bottom-8 right-8 opacity-60">
+<div class="absolute bottom-8 right-8 opacity-70">
 <svg fill="none" height="60" viewbox="0 0 100 100" width="60" xmlns="http://www.w3.org/2000/svg">
-<path d="M20 80C30 80 40 70 40 50C40 30 50 20 70 20" stroke="white" stroke-linecap="round" stroke-width="1.5"></path>
-<path d="M30 60C50 60 60 40 80 40" stroke="white" stroke-linecap="round" stroke-width="1.5"></path>
+<path d="M20 80C30 80 40 70 40 50C40 30 50 20 70 20" stroke="#FAF7F1" stroke-linecap="round" stroke-width="1.5"></path>
+<path d="M30 60C50 60 60 40 80 40" stroke="#FAF7F1" stroke-linecap="round" stroke-width="1.5"></path>
 </svg>
 </div>
 </div>
@@ -158,58 +120,79 @@
 <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
 <!-- Feature 1 -->
 <div class="flex flex-col items-center text-center space-y-4 px-4">
-<div class="w-10 h-10 flex items-center justify-center" data-purpose="feature-icon">
-<svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M20.38 3.46L16 2a4 4 0 0 1-8 0L3.62 3.46a2 2 0 0 0-1.62 1.96V21a1 1 0 0 0 1 1h18a1 1 0 0 0 1-1V5.42a2 2 0 0 0-1.62-1.96z"></path><path d="M12 2v20"></path><path d="M12 7h5"></path><path d="M12 11h3"></path><path d="M12 15h4"></path></svg>
+<div class="w-12 h-12 flex items-center justify-center rounded-full bg-brand-panel text-brand-forest" data-purpose="feature-icon">
+<svg fill="none" height="22" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="22" xmlns="http://www.w3.org/2000/svg"><path d="M20.38 3.46L16 2a4 4 0 0 1-8 0L3.62 3.46a2 2 0 0 0-1.62 1.96V21a1 1 0 0 0 1 1h18a1 1 0 0 0 1-1V5.42a2 2 0 0 0-1.62-1.96z"></path><path d="M12 2v20"></path><path d="M12 7h5"></path><path d="M12 11h3"></path><path d="M12 15h4"></path></svg>
 </div>
 <div class="space-y-2">
-<h3 class="font-bold text-lg">Curated pieces</h3>
-<p class="text-brand-muted text-sm leading-relaxed max-w-[240px] mx-auto font-space-grotesk">
-              Handpicked, high-end fashion from leading and emerging brands.
+<h3 class="font-bold text-lg text-brand-forest">Verified premium partners</h3>
+<p class="text-brand-sage text-sm leading-relaxed max-w-[240px] mx-auto font-space-grotesk">
+              Every piece comes from brands, boutiques, and designers we've vetted and partnered with directly &mdash; no fast fashion, no vague sustainability claims.
             </p>
 </div>
 </div>
 <!-- Feature 2 -->
 <div class="flex flex-col items-center text-center space-y-4 px-4 md:border-x border-brand-outline">
-<div class="w-10 h-10 flex items-center justify-center" data-purpose="feature-icon">
-<svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg>
+<div class="w-12 h-12 flex items-center justify-center rounded-full bg-brand-panel text-brand-forest" data-purpose="feature-icon">
+<svg fill="none" height="22" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="22" xmlns="http://www.w3.org/2000/svg"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg>
 </div>
 <div class="space-y-2">
-<h3 class="font-bold text-lg">For special moments</h3>
-<p class="text-brand-muted text-sm leading-relaxed max-w-[240px] mx-auto font-space-grotesk">
-              The pieces you love, when you need them.
+<h3 class="font-bold text-lg text-brand-forest">One wardrobe, every occasion</h3>
+<p class="text-brand-sage text-sm leading-relaxed max-w-[240px] mx-auto font-space-grotesk">
+              Events, dinners, travel, work: browse a single curated wardrobe instead of piecing together boutiques, resale sites, and other people's closets.
             </p>
 </div>
 </div>
 <!-- Feature 3 -->
 <div class="flex flex-col items-center text-center space-y-4 px-4">
-<div class="w-10 h-10 flex items-center justify-center" data-purpose="feature-icon">
-<svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+<div class="w-12 h-12 flex items-center justify-center rounded-full bg-brand-panel text-brand-forest" data-purpose="feature-icon">
+<svg fill="none" height="22" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="22" xmlns="http://www.w3.org/2000/svg"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
 </div>
 <div class="space-y-2">
-<h3 class="font-bold text-lg">Based in Lisbon</h3>
-<p class="text-brand-muted text-sm leading-relaxed max-w-[240px] mx-auto font-space-grotesk">
-              Local service, personal experience, sustainable by design.
+<h3 class="font-bold text-lg text-brand-forest">Lisbon first</h3>
+<p class="text-brand-sage text-sm leading-relaxed max-w-[240px] mx-auto font-space-grotesk">
+              Built for Lisbon's style-conscious women and launching locally first, before any other city.
             </p>
 </div>
 </div>
 </div>
 </section>
 <!-- END: FeatureSection -->
+<!-- BEGIN: MissionSection -->
+<section class="py-16 md:py-24 border-t border-brand-outline" data-purpose="mission">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+<div class="relative w-full aspect-[4/5] max-w-md mx-auto lg:mx-0" data-purpose="mission-image-container">
+<img alt="Elegant editorial fashion photography, tailored premium outfit" class="w-full h-full object-cover rounded-xl-brand shadow-brand" src="assets/images/mission.jpg"/>
+</div>
+<div class="flex flex-col space-y-6 max-w-xl">
+<p class="eyebrow font-bold uppercase text-brand-sage">Our mission</p>
+<h2 class="text-3xl md:text-4xl font-bold tracking-tight leading-[1.15] text-brand-forest">
+            Circular fashion, done properly &mdash; not just relabelled.
+          </h2>
+<p class="text-base md:text-lg text-brand-sage font-space-grotesk leading-relaxed">
+            "Sustainable" gets printed on a lot of tags that don't mean much. LOUP gives premium brands, boutiques, and independent designers a real, trusted channel to put their pieces back into circulation, and gives you one calm, curated place to access them &mdash; instead of stitching together brand sites, boutiques, resale apps, and private wardrobes yourself.
+          </p>
+<p class="text-base md:text-lg text-brand-sage font-space-grotesk leading-relaxed">
+            The result: fewer one-time purchases gathering dust, more premium pieces in circulation, and a wardrobe that's ready for whatever Lisbon has on the calendar.
+          </p>
+</div>
+</div>
+</section>
+<!-- END: MissionSection -->
 </main>
 <!-- END: MainContent -->
 <!-- BEGIN: Footer -->
-<footer class="w-full border-t border-brand-outline bg-white py-12" data-purpose="main-footer">
+<footer class="w-full border-t border-brand-outline bg-brand-forest py-14" data-purpose="main-footer">
 <div class="max-w-screen-2xl mx-auto px-6 md:px-12 flex flex-col md:flex-row justify-between items-center gap-6">
-<div class="text-xs font-bold uppercase tracking-widest text-brand-black font-space-grotesk" data-purpose="footer-logo">
-        LOUP. SHARED WARDROBE
+<div class="text-xs font-bold uppercase tracking-widest text-brand-ivory font-space-grotesk" data-purpose="footer-logo">
+        LOUP. CIRCULAR FASHION, LISBON FIRST
       </div>
-<div class="flex space-x-8 text-sm text-brand-muted font-space-grotesk" data-purpose="footer-links">
-<a class="hover:text-brand-black transition-colors" href="#">Privacy Policy</a>
-<a class="hover:text-brand-black transition-colors" href="#">Terms of Service</a>
-<a class="hover:text-brand-black transition-colors" href="#">Contact</a>
+<div class="flex space-x-8 text-sm text-brand-ivory/70 font-space-grotesk" data-purpose="footer-links">
+<a class="hover:text-brand-ivory transition-colors" href="#">Privacy Policy</a>
+<a class="hover:text-brand-ivory transition-colors" href="#">Terms of Service</a>
+<a class="hover:text-brand-ivory transition-colors" href="#">Contact</a>
 </div>
-<div class="text-xs text-brand-muted font-space-grotesk" data-purpose="copyright">
-        © 2024 LOUP. SHARED WARDROBE. All rights reserved.
+<div class="text-xs text-brand-ivory/70 font-space-grotesk" data-purpose="copyright">
+        &copy; 2026 LOUP. All rights reserved.
       </div>
 </div>
 </footer>
