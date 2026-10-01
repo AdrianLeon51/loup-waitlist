@@ -312,7 +312,7 @@ velvet greens come from the photos, not the CSS.
   copy block only. Never tint the whole image.
 - **Assets**: four free Unsplash photos (hero, inset, block, detail), credited
   in `assets/images/CREDITS.md`. They are cropped to 4:5 (detail 1:1) and
-  served as WebP `srcset` with one JPEG fallback per slot. The OG/Twitter
+  served as AVIF, then WebP, `srcset`s with one JPEG fallback per slot. The OG/Twitter
   image is a 1200×630 crop of the boutique interior (`og-1200x630.jpg`).
   Originals live in the git-ignored `assets/images/src/`.
 
@@ -584,10 +584,29 @@ re-deriving it.
   `base` layer, and an important rule in an earlier layer beats one in
   `components`, so the mobile "show every panel" rule could never win.
 - **Images**: crop with Pillow from the originals in
-  `assets/images/src/`, export WebP at hero 800/1200/1600, inset 400/700,
-  block 720/1200, detail 600/900, plus one JPEG fallback per slot; give every
-  `<img>` explicit `width`/`height`, `loading="lazy"` except the hero, and
-  credit new photos in `CREDITS.md`.
+  `assets/images/src/` and export at hero 800/1200/1600, inset 400/700,
+  block 720/1200, detail 600/900.
+  - Formats, in `<picture>` order: **AVIF → WebP → one JPEG fallback** per
+    slot. Every `<source>` carries the same `srcset` widths and `sizes`.
+  - Quality is measured, not guessed: each AVIF uses the lowest quality whose
+    SSIM (luminance, against a Lanczos resize of the original) is at least the
+    WebP's. That made AVIF 15–32% smaller than WebP at equal quality.
+  - Give every `<img>` explicit `width`/`height` and `loading="lazy"`,
+    except the hero, which has `fetchpriority="high"` and a matching AVIF
+    `<link rel="preload" … fetchpriority="high">`. Credit new photos in
+    `CREDITS.md`.
+- **Fonts** are self-hosted in `assets/fonts/` (SIL OFL, see its
+  `LICENSE.md`): one variable woff2 per family and subset (latin,
+  latin-ext), declared with `@font-face` in `src/input.css` with Google's
+  `unicode-range`s and `font-display: swap`. Every page preloads the two
+  **latin** files (`as="font" type="font/woff2" crossorigin`). Don't
+  re-add Google Fonts links.
+- **Analytics**: the inline snippet at the top of every page queues the
+  pageview immediately and injects `gtag.js` on idle after `window` load.
+  Keep it that way; a plain `<script async>` gtag competes with the hero.
+- **Performance budget** (Lighthouse mobile, local server): LCP ≤ 2s, CLS
+  ≤ 0.02, no third-party request before `load`. The page itself (HTML, CSS,
+  JS, fonts, hero) is about 120 KB; gtag.js is the largest single file.
 - **Static chrome**: the bar, header and footer are duplicated in every HTML
   page (there is no templating). Any change to them must be made on every
   page, EN and PT.
