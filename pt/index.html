@@ -1,13 +1,22 @@
 <!DOCTYPE html>
 
 <html lang="pt"><head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-XPM0YCTFR8"></script>
+<!-- Google tag (gtag.js): the pageview is queued now; the script loads once the page has finished loading -->
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
   gtag('config', 'G-XPM0YCTFR8');
+  window.addEventListener('load', function () {
+    var load = function () {
+      var s = document.createElement('script');
+      s.async = true;
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=G-XPM0YCTFR8';
+      document.head.appendChild(s);
+    };
+    if ('requestIdleCallback' in window) requestIdleCallback(load, { timeout: 3000 });
+    else setTimeout(load, 1);
+  });
 </script>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
@@ -52,7 +61,7 @@
 <link rel="stylesheet" href="/assets/css/site.css"/>
 <link rel="preload" href="/assets/fonts/syne-latin.woff2" as="font" type="font/woff2" crossorigin=""/>
 <link rel="preload" href="/assets/fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin=""/>
-<link rel="preload" as="image" type="image/avif" href="/assets/images/hero-1200.avif" imagesrcset="/assets/images/hero-800.avif 800w, /assets/images/hero-1200.avif 1200w, /assets/images/hero-1600.avif 1600w" imagesizes="(min-width: 1024px) 58vw, 100vw"/>
+<link rel="preload" as="image" type="image/avif" fetchpriority="high" href="/assets/images/hero-1200.avif" imagesrcset="/assets/images/hero-800.avif 800w, /assets/images/hero-1200.avif 1200w, /assets/images/hero-1600.avif 1600w" imagesizes="(min-width: 1024px) 58vw, 100vw"/>
 <script src="/assets/js/site.js" defer></script>
 </head>
 <body class="l-page min-h-screen flex flex-col font-space-grotesk">
