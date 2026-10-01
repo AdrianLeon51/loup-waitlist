@@ -425,8 +425,7 @@ Each section uses a different scale and shape on purpose (F+N):
 ## Elevation & Depth
 
 Flat. **No box shadows anywhere** (F+N), so the old `--shadow-brand` and
-`--shadow-brand-sm` tokens are not used by redesigned pages. They are deleted
-from `src/input.css` once every page has migrated. Depth comes from:
+`--shadow-brand-sm` tokens have been deleted from `src/input.css`. Depth comes from:
 - **tonal layering**: ivory page → `#F1ECE1` panel → white field;
 - **full-bleed colour blocks** against ivory;
 - **photography** and a detail crop rising out of the panel edge.
@@ -463,8 +462,9 @@ Two shape languages, as in Nudea, each with a clear job:
 - **10px**: reserved for future garment and partner cards (N product
   cards). Nothing on the waitlist page uses it.
 
-The old `--radius-brand` (8px) and `--radius-xl-brand` (20px) are not used by
-redesigned pages and are deleted once every page has migrated.
+The old `--radius-brand` (8px) and `--radius-xl-brand` (20px) and the old
+`.eyebrow` rule have been deleted; every page now uses `--radius-pill` and
+`.l-label`.
 Strokes are 1px; tab indicators are 2px.
 
 ## Components
