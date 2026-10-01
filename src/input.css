@@ -224,11 +224,12 @@
   /* --- tabs (desktop) → stacked panels (mobile) --------------------------- */
   .l-tablist { display: none; }
   .l-tab-heading { display: block; }
-  .l-tabpanel[hidden] { display: block; }
+  /* Mobile shows every panel stacked; only desktop hides inactive ones.
+     (A class, not [hidden]: preflight's [hidden] !important can't be overridden from this layer.) */
   @media (width >= 48rem) {
     .l-tablist { display: flex; gap: 32px; border-bottom: 1px solid var(--color-brand-outline); }
     .l-tab-heading { display: none; }
-    .l-tabpanel[hidden] { display: none; }
+    .l-tabpanel.is-inactive { display: none; }
   }
   .l-tab {
     height: 44px;

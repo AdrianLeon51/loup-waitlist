@@ -50,7 +50,7 @@
         var on = t === tab;
         t.setAttribute('aria-selected', String(on));
         t.tabIndex = on ? 0 : -1;
-        document.getElementById(t.getAttribute('aria-controls')).hidden = !on;
+        document.getElementById(t.getAttribute('aria-controls')).classList.toggle('is-inactive', !on);
       });
       if (focus) tab.focus();
     };

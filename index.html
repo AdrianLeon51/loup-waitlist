@@ -12,7 +12,7 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>LOUP. | Premium fashion, circular by design. Lisbon first.</title>
-<meta name="description" content="LOUP helps premium brands and boutiques go circular — rental, resale, take-back or a model of their own. Lisbon first. Join the waitlist."/>
+<meta name="description" content="LOUP helps premium brands and boutiques go circular — rental, try-before-you-buy, resale, take-back or a model of their own. Lisbon first. Join the waitlist."/>
 <link rel="canonical" href="https://www.loupfashion.pt/"/>
 <link rel="alternate" hreflang="en" href="https://www.loupfashion.pt/"/>
 <link rel="alternate" hreflang="pt" href="https://www.loupfashion.pt/pt/"/>
@@ -23,13 +23,13 @@
 <meta property="og:locale:alternate" content="pt_PT"/>
 <meta property="og:url" content="https://www.loupfashion.pt/"/>
 <meta property="og:title" content="LOUP. | Premium fashion, circular by design. Lisbon first."/>
-<meta property="og:description" content="LOUP helps premium brands and boutiques go circular — rental, resale, take-back or a model of their own. Lisbon first. Join the waitlist."/>
+<meta property="og:description" content="LOUP helps premium brands and boutiques go circular — rental, try-before-you-buy, resale, take-back or a model of their own. Lisbon first. Join the waitlist."/>
 <meta property="og:image" content="https://www.loupfashion.pt/assets/images/og-1200x630.jpg"/>
 <meta property="og:image:width" content="1200"/>
 <meta property="og:image:height" content="630"/>
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:title" content="LOUP. | Premium fashion, circular by design. Lisbon first."/>
-<meta name="twitter:description" content="LOUP helps premium brands and boutiques go circular — rental, resale, take-back or a model of their own. Lisbon first. Join the waitlist."/>
+<meta name="twitter:description" content="LOUP helps premium brands and boutiques go circular — rental, try-before-you-buy, resale, take-back or a model of their own. Lisbon first. Join the waitlist."/>
 <meta name="twitter:image" content="https://www.loupfashion.pt/assets/images/og-1200x630.jpg"/>
 <script type="application/ld+json">
 {
@@ -37,7 +37,7 @@
   "@type": "Organization",
   "name": "LOUP",
   "url": "https://www.loupfashion.pt/",
-  "description": "LOUP helps premium brands and boutiques go circular — rental, resale, take-back or a model of their own. Lisbon first.",
+  "description": "LOUP helps premium brands and boutiques go circular — rental, try-before-you-buy, resale, take-back or a model of their own. Lisbon first.",
   "email": "hello@loupfashion.pt"
 }
 </script>
@@ -120,6 +120,7 @@
     </div>
     <div class="l-tablist mt-10" role="tablist" aria-label="Circular model">
       <button class="l-tab l-label" role="tab" id="tab-rental" aria-controls="panel-rental" aria-selected="true" type="button">Rental</button>
+      <button class="l-tab l-label" role="tab" id="tab-trial" aria-controls="panel-trial" aria-selected="false" tabindex="-1" type="button">Try before you buy</button>
       <button class="l-tab l-label" role="tab" id="tab-resale" aria-controls="panel-resale" aria-selected="false" tabindex="-1" type="button">Resale</button>
       <button class="l-tab l-label" role="tab" id="tab-takeback" aria-controls="panel-takeback" aria-selected="false" tabindex="-1" type="button">Take-back</button>
       <button class="l-tab l-label" role="tab" id="tab-custom" aria-controls="panel-custom" aria-selected="false" tabindex="-1" type="button">Your model</button>
@@ -150,7 +151,27 @@
             </li>
           </ol>
         </div>
-        <div class="l-tabpanel md:pt-28" role="tabpanel" id="panel-resale" aria-labelledby="tab-resale" hidden>
+        <div class="l-tabpanel md:pt-28 is-inactive" role="tabpanel" id="panel-trial" aria-labelledby="tab-trial">
+          <h3 class="l-tab-heading l-label text-brand-sage mb-6">Try before you buy</h3>
+          <ol class="grid gap-10 md:grid-cols-3 md:gap-6">
+            <li>
+              <p class="l-label text-brand-sage">01</p>
+              <h4 class="l-title mt-3">Offer a trial period</h4>
+              <p class="l-body mt-3 max-w-[43ch]">Customers take pieces home for a few days before deciding.</p>
+            </li>
+            <li>
+              <p class="l-label text-brand-sage">02</p>
+              <h4 class="l-title mt-3">Keep what they love</h4>
+              <p class="l-body mt-3 max-w-[43ch]">They pay only for what they keep; the rest comes back to us.</p>
+            </li>
+            <li>
+              <p class="l-label text-brand-sage">03</p>
+              <h4 class="l-title mt-3">Nothing sits idle</h4>
+              <p class="l-body mt-3 max-w-[43ch]">Returned pieces are checked and go back into rental or resale.</p>
+            </li>
+          </ol>
+        </div>
+        <div class="l-tabpanel md:pt-28 is-inactive" role="tabpanel" id="panel-resale" aria-labelledby="tab-resale">
           <h3 class="l-tab-heading l-label text-brand-sage mb-6">Resale</h3>
           <ol class="grid gap-10 md:grid-cols-3 md:gap-6">
             <li>
@@ -170,7 +191,7 @@
             </li>
           </ol>
         </div>
-        <div class="l-tabpanel md:pt-28" role="tabpanel" id="panel-takeback" aria-labelledby="tab-takeback" hidden>
+        <div class="l-tabpanel md:pt-28 is-inactive" role="tabpanel" id="panel-takeback" aria-labelledby="tab-takeback">
           <h3 class="l-tab-heading l-label text-brand-sage mb-6">Take-back</h3>
           <ol class="grid gap-10 md:grid-cols-3 md:gap-6">
             <li>
@@ -190,7 +211,7 @@
             </li>
           </ol>
         </div>
-        <div class="l-tabpanel md:pt-28" role="tabpanel" id="panel-custom" aria-labelledby="tab-custom" hidden>
+        <div class="l-tabpanel md:pt-28 is-inactive" role="tabpanel" id="panel-custom" aria-labelledby="tab-custom">
           <h3 class="l-tab-heading l-label text-brand-sage mb-6">Your model</h3>
           <ol class="grid gap-10 md:grid-cols-3 md:gap-6">
             <li>
@@ -226,7 +247,7 @@
         </li>
         <li class="l-block-row">
           <h3 class="l-title">Any circular model</h3>
-          <p class="l-body mt-2">Rental, resale, take-back or a mix &mdash; whatever fits your brand.</p>
+          <p class="l-body mt-2">Rental, try-before-you-buy, resale, take-back or a mix &mdash; whatever fits your brand.</p>
         </li>
         <li class="l-block-row">
           <h3 class="l-title">Circular by design</h3>
@@ -276,11 +297,11 @@
       <div class="l-faq col-span-12 md:col-span-8">
         <details>
           <summary class="l-title">What is LOUP?</summary>
-          <p class="l-body pb-6 max-w-[65ch]">A Lisbon-first circular fashion partner for premium brands and boutiques. We set up and run the circular model that fits each brand: rental, resale, take-back or a mix.</p>
+          <p class="l-body pb-6 max-w-[65ch]">A Lisbon-first circular fashion partner for premium brands and boutiques. We set up and run the circular model that fits each brand: rental, try-before-you-buy, resale, take-back or a mix.</p>
         </details>
         <details>
           <summary class="l-title">Which circular models do you offer?</summary>
-          <p class="l-body pb-6 max-w-[65ch]">Rental, resale and take-back to start, plus repair, upcycling or a combination where it makes sense. We start from your brand, not from a fixed format.</p>
+          <p class="l-body pb-6 max-w-[65ch]">Rental, try-before-you-buy, resale and take-back to start, plus repair, upcycling or a combination where it makes sense. We start from your brand, not from a fixed format.</p>
         </details>
         <details>
           <summary class="l-title">Who can partner with LOUP?</summary>
@@ -292,7 +313,7 @@
         </details>
         <details>
           <summary class="l-title">Can I join as a customer?</summary>
-          <p class="l-body pb-6 max-w-[65ch]">Yes. Depending on each brand's programme, you'll be able to rent, buy pre-owned or hand back pieces. Join the waitlist and we'll be in touch when LOUP opens.</p>
+          <p class="l-body pb-6 max-w-[65ch]">Yes. Depending on each brand's programme, you'll be able to rent, try before you buy, buy pre-owned or hand back pieces. Join the waitlist and we'll be in touch when LOUP opens.</p>
         </details>
         <details>
           <summary class="l-title">What happens to my email?</summary>

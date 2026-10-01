@@ -377,7 +377,7 @@ image scale and text anchor. Don't normalise them. Values are for
 | 1 | Header, 88px, sticky | wordmark left · nav, PT toggle, outline pill "Join" right | — | — | ivory | F sticky header that hides on scroll down |
 | 2 | Hero | copy 40% · image 56%, image **flush to the right viewport edge** | large 4:5 portrait, square corners, about 800px wide | 480px column, **left-aligned and anchored low**: its bottom lines up with the image's lower third. Eyebrow → h1 → body-lg → waitlist field → trust caption | ivory | F split + N off-centre anchoring |
 | 3 | Statement | single block at the editorial indent | — | display-md, 940px, sage secondary clause | ivory | N brand statement |
-| 4 | How it works | model tabs (Rental · Resale · Take-back · Your model), then **25/75** | small 4:5 inset image, about 340px | 3 numbered step columns (title-md + body-md), top-anchored, starting about 120px below the tab row | ivory | F rewards tabs + 25/75 grid |
+| 4 | How it works | model tabs (Rental · Try before you buy · Resale · Take-back · Your model), then **25/75** | small 4:5 inset image, about 340px | 3 numbered step columns (title-md + body-md), top-anchored, starting about 120px below the tab row | ivory | F rewards tabs + 25/75 grid |
 | 5 | Why LOUP | **full-bleed 50/50**, photo flush right | tall portrait, 720px+ | 3–4 title-md rows with ivory hairlines (`outline-on-dark` equivalent at 24%), left at the editorial indent, vertically centred | **sage block**, flush | N olive Bra Styles panel |
 | 6 | Standards and trust | contained panel inside the page inset, **57/37** | optional garment-detail crop **rising from the panel's bottom edge**, `object-fit: contain` | copy in the right column, top-aligned 72px in, sitting high against the image | panel `#F1ECE1` | F "How it works" panel |
 | 7 | FAQ | full width | — | 72px rows, question left, +/− right, `#E2DDCE` hairlines | ivory | F member-support rows |
@@ -569,7 +569,7 @@ watermark (N's SVG watermark idea), decorative and `aria-hidden`.
 >   - hero with a 480px left column anchored low beside a 4:5 portrait
 >     bleeding to the right edge;
 >   - 940px statement at a one-column indent;
->   - circular-model tabs (Rental · Resale · Take-back · Your model) over a 25/75 grid (small 4:5 image + three
+>   - circular-model tabs (Rental · Try before you buy · Resale · Take-back · Your model) over a 25/75 grid (small 4:5 image + three
 >     numbered steps);
 >   - full-bleed sage 50/50 with a list left and photo right;
 >   - contained panel 57/37 with copy high on the right;
