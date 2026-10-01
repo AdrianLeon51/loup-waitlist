@@ -1,11 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://www.loupfashion.pt/</loc></url>
-  <url><loc>https://www.loupfashion.pt/success.html</loc></url>
-  <url><loc>https://www.loupfashion.pt/privacy.html</loc></url>
-  <url><loc>https://www.loupfashion.pt/terms.html</loc></url>
-  <url><loc>https://www.loupfashion.pt/pt/</loc></url>
-  <url><loc>https://www.loupfashion.pt/pt/success.html</loc></url>
-  <url><loc>https://www.loupfashion.pt/pt/privacy.html</loc></url>
-  <url><loc>https://www.loupfashion.pt/pt/terms.html</loc></url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://www.loupfashion.pt/</loc>
+    <lastmod>2026-10-01</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.loupfashion.pt/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.loupfashion.pt/pt/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.loupfashion.pt/"/>
+  </url>
+  <url>
+    <loc>https://www.loupfashion.pt/pt/</loc>
+    <lastmod>2026-10-01</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.loupfashion.pt/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.loupfashion.pt/pt/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.loupfashion.pt/"/>
+  </url>
+  <url>
+    <loc>https://www.loupfashion.pt/privacy.html</loc>
+    <lastmod>2026-10-01</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.loupfashion.pt/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.loupfashion.pt/pt/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.loupfashion.pt/privacy.html"/>
+  </url>
+  <url>
+    <loc>https://www.loupfashion.pt/pt/privacy.html</loc>
+    <lastmod>2026-10-01</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.loupfashion.pt/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.loupfashion.pt/pt/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.loupfashion.pt/privacy.html"/>
+  </url>
+  <url>
+    <loc>https://www.loupfashion.pt/terms.html</loc>
+    <lastmod>2026-10-01</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.loupfashion.pt/terms.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.loupfashion.pt/pt/terms.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.loupfashion.pt/terms.html"/>
+  </url>
+  <url>
+    <loc>https://www.loupfashion.pt/pt/terms.html</loc>
+    <lastmod>2026-10-01</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.loupfashion.pt/terms.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.loupfashion.pt/pt/terms.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.loupfashion.pt/terms.html"/>
+  </url>
 </urlset>
