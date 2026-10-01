@@ -15,24 +15,70 @@
 <meta name="robots" content="noindex"/>
 <link rel="icon" type="image/svg+xml" href="/favicon.svg"/>
 <link rel="stylesheet" href="/assets/css/site.css"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""/>
+<!-- Google Fonts: Syne & Space Grotesk -->
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&amp;family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<script src="/assets/js/site.js" defer></script>
 </head>
-<body class="min-h-screen flex flex-col">
-<header class="w-full max-w-screen-2xl mx-auto px-6 md:px-12 py-8 flex justify-between items-center" data-purpose="main-header">
-<a href="/" class="flex flex-col" data-purpose="brand-logo">
-<span class="text-3xl font-extrabold logo-text leading-none uppercase text-brand-forest">Loup.</span>
-<span class="eyebrow font-bold uppercase mt-1 text-brand-sage">Circular Fashion &middot; Lisbon</span>
-</a>
+<body class="l-page min-h-screen flex flex-col font-space-grotesk">
+<a class="l-skip l-caption" href="#main">Skip to content</a>
+
+<!-- 0. Announcement bar -->
+<div class="l-bar l-caption">Opening soon in Lisbon &middot; for premium brands &amp; boutiques</div>
+
+<!-- 1. Header -->
+<header class="l-header l-wrap flex items-center justify-between">
+  <a class="flex flex-col" href="/" aria-label="LOUP home">
+    <span class="text-3xl font-extrabold logo-text leading-none uppercase text-brand-forest">Loup.</span>
+    <span class="l-label mt-1 text-brand-sage hidden sm:block">Circular fashion &middot; Lisbon</span>
+  </a>
+  <nav class="flex items-center gap-2 md:gap-6" aria-label="Main">
+    <a class="l-link hidden md:inline text-sm font-semibold" href="/#how">How it works</a>
+    <a class="l-link hidden md:inline text-sm font-semibold" href="/#faq">FAQ</a>
+    <a class="l-link text-sm font-semibold text-brand-sage hover:text-brand-forest px-2" href="/pt/" hreflang="pt" lang="pt">PT</a>
+    <a class="l-btn-outline" href="/#waitlist">Join the waitlist</a>
+  </nav>
 </header>
-<main class="flex-grow flex flex-col items-center justify-center text-center px-6 py-16">
-<p class="eyebrow font-bold uppercase text-brand-sage mb-4">404</p>
-<h1 class="text-3xl md:text-4xl font-bold tracking-tight text-brand-forest mb-3">Page not found.</h1>
-<p class="text-brand-sage font-space-grotesk mb-1">The page you're looking for doesn't exist or has moved.</p>
-<p class="text-brand-sage font-space-grotesk mb-8">A página que procura não existe ou foi movida.</p>
-<a class="bg-brand-forest text-brand-ivory px-6 py-3 rounded-brand font-semibold hover:bg-brand-forestDeep transition-colors font-space-grotesk" href="/">Back to homepage / Voltar à página inicial</a>
+
+<main id="main" class="l-wrap flex-grow grid place-items-center text-center py-24">
+  <div class="max-w-[560px]">
+    <p class="l-label text-brand-sage">404</p>
+    <h1 class="l-display-md mt-4">Page not found.</h1>
+    <p class="l-body mt-4">The page you're looking for doesn't exist or has moved.</p>
+    <p class="l-body mt-4" lang="pt">A página que procura não existe ou foi movida.</p>
+    <div class="mt-10 flex flex-wrap justify-center gap-3">
+      <a class="l-btn" href="/">Back to homepage</a>
+      <a class="l-btn-outline h-12" href="/pt/" lang="pt" hreflang="pt">Voltar à página inicial</a>
+    </div>
+  </div>
 </main>
-<footer class="w-full border-t border-brand-outline bg-brand-forest py-10" data-purpose="main-footer">
-<div class="max-w-screen-2xl mx-auto px-6 md:px-12 text-center text-xs text-brand-ivory/70 font-space-grotesk">
-        &copy; 2026 LOUP. All rights reserved.
+
+<!-- 9. Footer: full-bleed forest with a giant wordmark -->
+<footer class="l-footer mt-24 md:mt-32">
+  <div class="l-wrap relative z-10 pt-16 pb-[17vw] md:pt-20">
+    <div class="l-grid gap-y-10">
+      <div class="col-span-12 md:col-span-6">
+        <p class="l-label">LOUP.</p>
+        <p class="l-body mt-4 max-w-[36ch] text-brand-ivory/70">Circular fashion for premium brands and boutiques. Lisbon first.</p>
       </div>
+      <div class="col-span-6 md:col-span-3">
+        <p class="l-label">Legal</p>
+        <ul class="mt-4 flex flex-col gap-2 l-body text-brand-ivory/70">
+          <li><a class="l-link hover:text-brand-ivory" href="privacy.html">Privacy Policy</a></li>
+          <li><a class="l-link hover:text-brand-ivory" href="terms.html">Terms of Service</a></li>
+        </ul>
+      </div>
+      <div class="col-span-6 md:col-span-3">
+        <p class="l-label">Contact</p>
+        <ul class="mt-4 flex flex-col gap-2 l-body text-brand-ivory/70">
+          <li><a class="l-link hover:text-brand-ivory" href="mailto:hello@loupfashion.pt">hello@loupfashion.pt</a></li>
+          <li><a class="l-link hover:text-brand-ivory" href="/pt/" hreflang="pt" lang="pt">Português</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="l-caption mt-14 text-brand-ivory/70">&copy; 2026 LOUP. All rights reserved.</p>
+  </div>
+  <div class="l-watermark" aria-hidden="true">LOUP.</div>
 </footer>
 </body></html>
