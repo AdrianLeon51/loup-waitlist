@@ -8,7 +8,7 @@ description: Calm, editorial circular-fashion identity for a Lisbon-first platfo
 # - References: D:\Websites\packless\design-extract\farfetch\DESIGN.md (F) and ...\nudea\DESIGN.md (N).
 #   Every structural rule below names its source with (F), (N) or (F+N).
 # - Contrast ratios are WCAG 2.x, computed from the hex tokens.
-# - Audience: premium brands and boutiques going circular through whichever model fits them (rental, resale, take-back or their own). Their customers are secondary.
+# - Audience: premium brands and boutiques going circular through whichever model fits them (rental, try before you buy, resale, take-back or their own). Their customers are secondary.
 colors:
   # --- surfaces -----------------------------------------------------------
   surface: "#FAF7F1"                # brand-ivory. Page canvas (N "cotton" role). Never pure white as the page
@@ -33,7 +33,7 @@ colors:
   block-mid: "#5C7566"              # brand-sage as one full-bleed block (N olive role)
   on-block-mid: "#FAF7F1"           # ivory on sage, 4.69:1 — keep text ≥16px
   # --- status (reserved, forms only) --------------------------------------
-  error: "#9B2C1F"                  # form validation only. 7.08:1 on ivory  # proposed — not in src/input.css yet
+  error: "#9B2C1F"                  # form validation only. 7.08:1 on ivory. = --color-brand-error in src/input.css
 typography:
   # Display sizes step by breakpoint (N), not fluid clamp. Mobile values in comments apply at ≤768px.
   display-lg:
@@ -230,8 +230,9 @@ motion:
 
 LOUP is a Lisbon-first circular-fashion platform. This page speaks first to
 **premium brands and boutiques** that want to put their pieces into
-circulation, whether through rental, resale, take-back or a model of their
-own, and second to the customers who rent, buy or return through them. It has to feel
+circulation, whether through rental, try before you buy, resale, take-back
+or a model of their own, and second to the customers who rent, try, buy or
+return through them. It has to feel
 curated, trustworthy, modern and calm. The brief's test applies to every
 section: does it feel high-quality and trustworthy, does it support a more
 sustainable use of fashion, and does it feel connected to Lisbon?
@@ -309,8 +310,11 @@ velvet greens come from the photos, not the CSS.
   area of the frame. If the photo cannot give enough contrast (4.5:1 for
   text), add a local `scrim` gradient-free fill of forest at 40% behind the
   copy block only. Never tint the whole image.
-- **Asset note**: `assets/images/hero.jpg` is 512×382. The new hero needs a
-  4:5 source of at least 1440×1800, plus AVIF/WebP derivatives.
+- **Assets**: four free Unsplash photos (hero, inset, block, detail), credited
+  in `assets/images/CREDITS.md`. They are cropped to 4:5 (detail 1:1) and
+  served as WebP `srcset` with one JPEG fallback per slot. The OG/Twitter
+  image is a 1200×630 crop of the boutique interior (`og-1200x630.jpg`).
+  Originals live in the git-ignored `assets/images/src/`.
 
 ## Typography
 
@@ -373,7 +377,7 @@ image scale and text anchor. Don't normalise them. Values are for
 
 | # | Section | Split | Primary media | Copy placement | Background | Source |
 |---|---|---|---|---|---|---|
-| 0 | Announcement bar, 32px | centred | — | caption "Launching in Lisbon · 2026", optional PT/EN on the right | forest | N brick bar |
+| 0 | Announcement bar, 32px | centred | — | caption "Opening soon in Lisbon · for premium brands & boutiques" (no dates) | forest | N brick bar |
 | 1 | Header, 88px, sticky | wordmark left · nav, PT toggle, outline pill "Join" right | — | — | ivory | F sticky header that hides on scroll down |
 | 2 | Hero | copy 40% · image 56%, image **flush to the right viewport edge** | large 4:5 portrait, square corners, about 800px wide | 480px column, **left-aligned and anchored low**: its bottom lines up with the image's lower third. Eyebrow → h1 → body-lg → waitlist field → trust caption | ivory | F split + N off-centre anchoring |
 | 3 | Statement | single block at the editorial indent | — | display-md, 940px, sage secondary clause | ivory | N brand statement |
@@ -410,7 +414,9 @@ Each section uses a different scale and shape on purpose (F+N):
 - **Hero**: the image moves **above** the copy at full content width, 4:5,
   and the waitlist field stacks with a full-width button.
 - **Display type** steps down to 36px (h1) and 28px (statement).
-- **Tabs** collapse into an accordion with 56px rows (F).
+- **Tabs**: the tablist is hidden and every model panel stacks under its own
+  label-caps heading, so nothing is behind a tap.
+- **Header**: the "Circular fashion · Lisbon" descriptor is hidden below 640px.
 - **Sage block**: the image goes on top, then the rows, still full-bleed.
 - **Panel**: the detail crop is dropped, as Farfetch drops its device mock.
 - **Section beat**: 72px, with 112px before the closing waitlist.
@@ -418,8 +424,9 @@ Each section uses a different scale and shape on purpose (F+N):
 
 ## Elevation & Depth
 
-Flat. **No box shadows anywhere** (F+N), so the live `--shadow-brand` and
-`--shadow-brand-sm` tokens are retired. Depth comes from:
+Flat. **No box shadows anywhere** (F+N), so the old `--shadow-brand` and
+`--shadow-brand-sm` tokens are not used by redesigned pages. They are deleted
+from `src/input.css` once every page has migrated. Depth comes from:
 - **tonal layering**: ivory page → `#F1ECE1` panel → white field;
 - **full-bleed colour blocks** against ivory;
 - **photography** and a detail crop rising out of the panel edge.
@@ -456,7 +463,8 @@ Two shape languages, as in Nudea, each with a clear job:
 - **10px**: reserved for future garment and partner cards (N product
   cards). Nothing on the waitlist page uses it.
 
-The live `--radius-brand` (8px) and `--radius-xl-brand` (20px) are retired.
+The old `--radius-brand` (8px) and `--radius-xl-brand` (20px) are not used by
+redesigned pages and are deleted once every page has migrated.
 Strokes are 1px; tab indicators are 2px.
 
 ## Components
@@ -476,7 +484,8 @@ the left (body-md, 24px left padding) and the primary button is **inset
 4px inside the pill** on the right. On mobile it becomes two stacked pills
 (field, then a full-width button).
 - **Focus-within**: the stroke thickens to 2px. No ring glow.
-- **Error**: a caption under the field in `error` `#9B2C1F` (proposed).
+- **Error**: a caption under the field in `error` `#9B2C1F`
+  (`--color-brand-error`).
 - The trust caption below it has a lock icon and sage text.
 
 ### Announcement bar
@@ -492,7 +501,8 @@ pill.
 ### Tabs (F)
 Label-caps text, 44px tall, sitting on a 1px `#E2DDCE` track. The active
 tab is forest with a 2px forest indicator; idle tabs are sage. There is no
-fill and no pill. Below 768px they become an accordion.
+fill and no pill. Below 768px the tablist is hidden and every panel shows,
+stacked, under a label-caps heading (`.l-tab-heading`).
 
 ### Step columns
 A label-caps number ("01"), then title-md, then body-md at 43ch or less,
@@ -511,8 +521,76 @@ native `<details>` element.
 ### Footer
 Full-bleed forest block (N). Three columns with label-caps ivory headings,
 ivory links at 70% that go to 100% on hover over 150ms, and a caption
-legal line. A giant "LOUP." wordmark in `#2F5241` sits behind as a
-watermark (N's SVG watermark idea), decorative and `aria-hidden`.
+legal line. A giant "LOUP." text wordmark (Syne 800, 22vw,
+`#2F5241`, pushed 0.2em below the bottom edge) sits behind as a watermark,
+Nudea's watermark idea done in type. It is decorative and `aria-hidden`.
+
+## Page templates
+
+Every page shares the same **chrome**: skip link, forest announcement bar,
+sticky header and forest footer with the watermark, copied verbatim from the
+home page. On sub-pages the nav links point to `/#how`, `/#faq` and
+`/#waitlist`, and the language toggle points to the same page in the other
+language. Body content then follows one of three templates.
+
+- **Home**: the composition table above.
+- **Document** (privacy, terms): a single column starting at the editorial
+  indent (`md:col-start-2 md:col-span-8`), body text at 65ch or less, 72px
+  below the header. Label-caps sage eyebrow ("Legal"), h1 in display-md, a
+  caption "Last updated" line, h2 in headline-md with 48px above, body-md,
+  inline links underlined. No images and no colour blocks: these pages are
+  read, not browsed.
+- **Message** (waitlist confirmation, 404): a small centred moment, the one
+  place centred text is allowed. Label-caps eyebrow, display-md heading, one
+  body-md line and a primary pill back to the home page, on ivory, with the
+  160px break before the footer.
+
+## Implementation
+
+How this document maps onto the code, so new pages reuse it instead of
+re-deriving it.
+
+- **Tokens** live in the `@theme` block of `src/input.css` as
+  `--color-brand-*`, `--radius-pill` and `--ease-link/control/reveal`.
+  `npm run build:css` compiles everything to the committed, minified
+  `assets/css/site.css` (Tailwind v4 CLI).
+- **Components** are the `l-`-prefixed classes in the `@layer components`
+  block of `src/input.css`:
+  - type: `.l-display-lg`, `.l-display-md`, `.l-headline`, `.l-title`,
+    `.l-body-lg`, `.l-body`, `.l-label`, `.l-caption`, `.l-soft` (sage
+    secondary clause);
+  - controls: `.l-btn`, `.l-btn-outline`, `.l-field` (pill with the button
+    inset), `.l-link`, `.l-tab`;
+  - frame: `.l-page`, `.l-wrap`, `.l-grid`, `.l-beat`, `.l-beat-break`;
+  - sections: `.l-bar`, `.l-header`, `.l-hero-copy`/`.l-hero-media`,
+    `.l-tablist`/`.l-tabpanel`, `.l-block`, `.l-panel`, `.l-faq`,
+    `.l-footer`/`.l-watermark`;
+  - behaviour hooks: `.l-reveal`, `.l-skip`.
+  Layout details inside sections use plain Tailwind utilities.
+- **Frame math**: `.l-page` sets `--inset` (24px, 48px from 768px) and
+  `--gutter-x: max(var(--inset), (100vw − 1536px) / 2 + var(--inset))`.
+  Bleeds use negative margins of `--gutter-x`; the sage block's copy starts
+  at `--gutter-x` plus one column. Beats are 72/112px on mobile and 96/160px
+  from 768px. The hero image height is `clamp(560px, 100svh − 120px, 880px)`
+  from 1024px.
+- **Behaviour** is `assets/js/site.js` (vanilla, deferred):
+  - header hides on scroll down after 240px, shows on scroll up, and gains a
+    hairline after 40px;
+  - `.l-reveal` elements fade up once, only when JS and motion are allowed
+    (the script adds `.js` to `<html>`, so content is visible without it);
+  - tabs follow the WAI-ARIA pattern (click, arrows, Home/End).
+- **Tab panels are toggled with the `is-inactive` class, never `[hidden]`.**
+  Tailwind's preflight hides `[hidden]` with `!important` in the earlier
+  `base` layer, and an important rule in an earlier layer beats one in
+  `components`, so the mobile "show every panel" rule could never win.
+- **Images**: crop with Pillow from the originals in
+  `assets/images/src/`, export WebP at hero 800/1200/1600, inset 400/700,
+  block 720/1200, detail 600/900, plus one JPEG fallback per slot; give every
+  `<img>` explicit `width`/`height`, `loading="lazy"` except the hero, and
+  credit new photos in `CREDITS.md`.
+- **Static chrome**: the bar, header and footer are duplicated in every HTML
+  page (there is no templating). Any change to them must be made on every
+  page, EN and PT.
 
 ## Do's and Don'ts
 
@@ -579,5 +657,5 @@ watermark (N's SVG watermark idea), decorative and `aria-hidden`.
 > - **Motion**: links 150ms `cubic-bezier(.66,0,.2,1)`, controls 300ms
 >   `cubic-bezier(0,0,0,1)`, 16px/600ms fade-up reveals, all off under
 >   reduced motion.
-> - **Mobile**: images above copy, left-aligned, tabs become an accordion,
->   full-width CTA.
+> - **Mobile**: images above copy, left-aligned, model panels stacked under
+>   their own headings, full-width CTA.
