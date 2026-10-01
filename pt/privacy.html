@@ -23,74 +23,91 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""/>
 <!-- Google Fonts: Syne & Space Grotesk -->
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&amp;family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<script src="/assets/js/site.js" defer></script>
 </head>
-<body class="min-h-screen flex flex-col">
-<!-- BEGIN: TopNavBar -->
-<header class="w-full max-w-screen-2xl mx-auto px-6 md:px-12 py-8 flex justify-between items-center" data-purpose="main-header">
-<a href="/pt/" class="flex flex-col" data-purpose="brand-logo">
-<span class="text-3xl font-extrabold logo-text leading-none uppercase text-brand-forest">Loup.</span>
-<span class="eyebrow font-bold uppercase mt-1 text-brand-sage">Moda Circular &middot; Lisboa</span>
-</a>
-<nav class="flex items-center gap-6">
-<a class="text-sm font-semibold text-brand-forest hover:opacity-70 transition-opacity duration-300 font-space-grotesk" data-purpose="nav-link" href="/pt/#waitlist">Lista de espera</a>
-<a class="text-sm font-semibold text-brand-sage hover:text-brand-forest transition-colors duration-300 font-space-grotesk" href="/privacy.html" hreflang="en" lang="en">EN</a>
-</nav>
+<body class="l-page min-h-screen flex flex-col font-space-grotesk">
+<a class="l-skip l-caption" href="#main">Saltar para o conteúdo</a>
+
+<!-- 0. Announcement bar -->
+<div class="l-bar l-caption">Em breve em Lisboa &middot; para marcas e boutiques premium</div>
+
+<!-- 1. Header -->
+<header class="l-header l-wrap flex items-center justify-between">
+  <a class="flex flex-col" href="/pt/" aria-label="LOUP — página inicial">
+    <span class="text-3xl font-extrabold logo-text leading-none uppercase text-brand-forest">Loup.</span>
+    <span class="l-label mt-1 text-brand-sage hidden sm:block">Moda circular &middot; Lisboa</span>
+  </a>
+  <nav class="flex items-center gap-2 md:gap-6" aria-label="Principal">
+    <a class="l-link hidden md:inline text-sm font-semibold" href="/pt/#how">Como funciona</a>
+    <a class="l-link hidden md:inline text-sm font-semibold" href="/pt/#faq">Perguntas</a>
+    <a class="l-link text-sm font-semibold text-brand-sage hover:text-brand-forest px-2" href="/privacy.html" hreflang="en" lang="en">EN</a>
+    <a class="l-btn-outline" href="/pt/#waitlist">Lista de espera</a>
+  </nav>
 </header>
-<!-- END: TopNavBar -->
-<!-- BEGIN: MainContent -->
-<main class="flex-grow w-full max-w-screen-2xl mx-auto px-6 md:px-12 py-8">
-<div class="max-w-2xl mx-auto space-y-8 pb-16">
-<div class="space-y-3">
-<p class="eyebrow font-bold uppercase text-brand-sage">Legal</p>
-<h1 class="text-3xl md:text-4xl font-bold tracking-tight leading-[1.1] text-brand-forest">Política de Privacidade</h1>
-<p class="text-sm text-brand-sage font-space-grotesk">Última atualização: setembro de 2026</p>
-</div>
-<div class="space-y-6 font-space-grotesk text-brand-forest leading-relaxed">
+
+<main id="main" class="flex-grow l-wrap l-grid pt-[72px]">
+<article class="col-span-12 md:col-start-2 md:col-span-8">
+<header>
+<p class="l-label text-brand-sage">Legal</p>
+<h1 class="l-display-md mt-4">Política de Privacidade</h1>
+<p class="l-caption text-brand-sage mt-4">Última atualização: setembro de 2026</p>
+</header>
+<div class="l-body mt-12 flex flex-col gap-5 max-w-[65ch]">
 <p>A LOUP é atualmente uma lista de espera antes do lançamento. Esta política explica a pouca informação que recolhemos nesta fase e como a tratamos.</p>
 
-<div class="space-y-2">
-<h2 class="text-xl font-bold text-brand-forest font-syne">O que recolhemos</h2>
+<section class="mt-7 flex flex-col gap-3">
+<h2 class="l-headline">O que recolhemos</h2>
 <p>Quando se junta à lista de espera, recolhemos o endereço de email que fornece. Não pedimos mais nenhuma informação neste site.</p>
-</div>
+</section>
 
-<div class="space-y-2">
-<h2 class="text-xl font-bold text-brand-forest font-syne">Porque o recolhemos</h2>
+<section class="mt-7 flex flex-col gap-3">
+<h2 class="l-headline">Porque o recolhemos</h2>
 <p>Apenas para o avisar quando a LOUP for lançada em Lisboa e para partilhar atualizações ocasionais e relevantes sobre o nosso progresso. Não utilizamos o seu email para mais nada, e não o vendemos nem partilhamos com terceiros para fins de marketing.</p>
-</div>
+</section>
 
-<div class="space-y-2">
-<h2 class="text-xl font-bold text-brand-forest font-syne">Como é processado</h2>
-<p>As inscrições na lista de espera são processadas pela <a class="underline hover:text-brand-forestDeep" href="https://web3forms.com" target="_blank" rel="noopener noreferrer">Web3Forms</a>, um serviço de terceiros de envio de formulários, que nos reencaminha a sua inscrição. Também utilizamos o Google Analytics para compreender o tráfego geral do site (por exemplo, quantas pessoas o visitam e de onde) — estes dados são agregados e não são utilizados para o identificar pessoalmente.</p>
-</div>
+<section class="mt-7 flex flex-col gap-3">
+<h2 class="l-headline">Como é processado</h2>
+<p>As inscrições na lista de espera são processadas pela <a class="underline underline-offset-4 hover:text-brand-forestDeep" href="https://web3forms.com" target="_blank" rel="noopener noreferrer">Web3Forms</a>, um serviço de terceiros de envio de formulários, que nos reencaminha a sua inscrição. Também utilizamos o Google Analytics para compreender o tráfego geral do site (por exemplo, quantas pessoas o visitam e de onde) — estes dados são agregados e não são utilizados para o identificar pessoalmente.</p>
+</section>
 
-<div class="space-y-2">
-<h2 class="text-xl font-bold text-brand-forest font-syne">Os seus direitos</h2>
-<p>Pode pedir-nos, a qualquer momento, que lhe digamos que informação temos sobre si, ou que eliminemos o seu email da nossa lista de espera — basta escrever para <a class="underline hover:text-brand-forestDeep" href="mailto:hello@loupfashion.pt">hello@loupfashion.pt</a>.</p>
-</div>
+<section class="mt-7 flex flex-col gap-3">
+<h2 class="l-headline">Os seus direitos</h2>
+<p>Pode pedir-nos, a qualquer momento, que lhe digamos que informação temos sobre si, ou que eliminemos o seu email da nossa lista de espera — basta escrever para <a class="underline underline-offset-4 hover:text-brand-forestDeep" href="mailto:hello@loupfashion.pt">hello@loupfashion.pt</a>.</p>
+</section>
 
-<div class="space-y-2">
-<h2 class="text-xl font-bold text-brand-forest font-syne">Dúvidas</h2>
-<p>Contacte-nos através de <a class="underline hover:text-brand-forestDeep" href="mailto:hello@loupfashion.pt">hello@loupfashion.pt</a>.</p>
+<section class="mt-7 flex flex-col gap-3">
+<h2 class="l-headline">Dúvidas</h2>
+<p>Contacte-nos através de <a class="underline underline-offset-4 hover:text-brand-forestDeep" href="mailto:hello@loupfashion.pt">hello@loupfashion.pt</a>.</p>
+</section>
 </div>
-</div>
-</div>
+</article>
 </main>
-<!-- END: MainContent -->
-<!-- BEGIN: Footer -->
-<footer class="w-full border-t border-brand-outline bg-brand-forest py-14" data-purpose="main-footer">
-<div class="max-w-screen-2xl mx-auto px-6 md:px-12 flex flex-col md:flex-row justify-between items-center gap-6">
-<div class="text-xs font-bold uppercase tracking-widest text-brand-ivory font-space-grotesk" data-purpose="footer-logo">
-        LOUP. MODA CIRCULAR, PRIMEIRO EM LISBOA
+
+<!-- 9. Footer: full-bleed forest with a giant wordmark -->
+<footer class="l-footer mt-24 md:mt-32">
+  <div class="l-wrap relative z-10 pt-16 pb-[17vw] md:pt-20">
+    <div class="l-grid gap-y-10">
+      <div class="col-span-12 md:col-span-6">
+        <p class="l-label">LOUP.</p>
+        <p class="l-body mt-4 max-w-[36ch] text-brand-ivory/70">Moda circular para marcas e boutiques premium. Primeiro em Lisboa.</p>
       </div>
-<div class="flex space-x-8 text-sm text-brand-ivory/70 font-space-grotesk" data-purpose="footer-links">
-<a class="hover:text-brand-ivory transition-colors" href="privacy.html">Política de Privacidade</a>
-<a class="hover:text-brand-ivory transition-colors" href="terms.html">Termos de Serviço</a>
-<a class="hover:text-brand-ivory transition-colors" href="mailto:hello@loupfashion.pt">Contacto</a>
-</div>
-<div class="text-xs text-brand-ivory/70 font-space-grotesk" data-purpose="copyright">
-        &copy; 2026 LOUP. Todos os direitos reservados.
+      <div class="col-span-6 md:col-span-3">
+        <p class="l-label">Legal</p>
+        <ul class="mt-4 flex flex-col gap-2 l-body text-brand-ivory/70">
+          <li><a class="l-link hover:text-brand-ivory" href="privacy.html">Política de Privacidade</a></li>
+          <li><a class="l-link hover:text-brand-ivory" href="terms.html">Termos de Serviço</a></li>
+        </ul>
       </div>
-</div>
+      <div class="col-span-6 md:col-span-3">
+        <p class="l-label">Contacto</p>
+        <ul class="mt-4 flex flex-col gap-2 l-body text-brand-ivory/70">
+          <li><a class="l-link hover:text-brand-ivory" href="mailto:hello@loupfashion.pt">hello@loupfashion.pt</a></li>
+          <li><a class="l-link hover:text-brand-ivory" href="/privacy.html" hreflang="en" lang="en">English</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="l-caption mt-14 text-brand-ivory/70">&copy; 2026 LOUP. Todos os direitos reservados.</p>
+  </div>
+  <div class="l-watermark" aria-hidden="true">LOUP.</div>
 </footer>
-<!-- END: Footer -->
 </body></html>
