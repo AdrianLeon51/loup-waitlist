@@ -24,11 +24,13 @@
 <meta property="og:url" content="https://www.loupfashion.pt/pt/"/>
 <meta property="og:title" content="LOUP. | Moda premium, circular por design. Primeiro em Lisboa."/>
 <meta property="og:description" content="A LOUP ajuda marcas premium a entrar na moda circular — primeiro em Lisboa. Guarda-roupa de confiança para eventos, viagens e trabalho."/>
-<meta property="og:image" content="https://www.loupfashion.pt/assets/images/hero.jpg"/>
+<meta property="og:image" content="https://www.loupfashion.pt/assets/images/og-1200x630.jpg"/>
+<meta property="og:image:width" content="1200"/>
+<meta property="og:image:height" content="630"/>
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:title" content="LOUP. | Moda premium, circular por design. Primeiro em Lisboa."/>
 <meta name="twitter:description" content="A LOUP ajuda marcas premium a entrar na moda circular — primeiro em Lisboa. Guarda-roupa de confiança para eventos, viagens e trabalho."/>
-<meta name="twitter:image" content="https://www.loupfashion.pt/assets/images/hero.jpg"/>
+<meta name="twitter:image" content="https://www.loupfashion.pt/assets/images/og-1200x630.jpg"/>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -52,127 +54,254 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""/>
 <!-- Google Fonts: Syne & Space Grotesk -->
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&amp;family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link rel="preload" as="image" type="image/webp" href="/assets/images/hero-1200.webp" imagesrcset="/assets/images/hero-800.webp 800w, /assets/images/hero-1200.webp 1200w, /assets/images/hero-1600.webp 1600w" imagesizes="(min-width: 1024px) 58vw, 100vw"/>
+<script src="/assets/js/site.js" defer></script>
 </head>
-<body class="min-h-screen flex flex-col">
-<!-- BEGIN: TopNavBar -->
-<header class="w-full max-w-screen-2xl mx-auto px-6 md:px-12 py-8 flex justify-between items-center" data-purpose="main-header">
-<div class="flex flex-col" data-purpose="brand-logo">
-<span class="text-3xl font-extrabold logo-text leading-none uppercase text-brand-forest">Loup.</span>
-<span class="eyebrow font-bold uppercase mt-1 text-brand-sage">Moda Circular &middot; Lisboa</span>
-</div>
-<nav class="flex items-center gap-6">
-<a class="text-sm font-semibold text-brand-forest hover:opacity-70 transition-opacity duration-300 font-space-grotesk" data-purpose="nav-link" href="#waitlist">Lista de espera</a>
-<a class="text-sm font-semibold text-brand-sage hover:text-brand-forest transition-colors duration-300 font-space-grotesk" href="/" hreflang="en" lang="en">EN</a>
-</nav>
+<body class="l-page min-h-screen flex flex-col font-space-grotesk">
+<a class="l-skip l-caption" href="#main">Saltar para o conteúdo</a>
+
+<!-- 0. Announcement bar -->
+<div class="l-bar l-caption">Em breve em Lisboa &middot; para marcas e boutiques premium</div>
+
+<!-- 1. Header -->
+<header class="l-header l-wrap flex items-center justify-between">
+  <a class="flex flex-col" href="/pt/" aria-label="LOUP — página inicial">
+    <span class="text-3xl font-extrabold logo-text leading-none uppercase text-brand-forest">Loup.</span>
+    <span class="l-label mt-1 text-brand-sage hidden sm:block">Moda circular &middot; Lisboa</span>
+  </a>
+  <nav class="flex items-center gap-2 md:gap-6" aria-label="Principal">
+    <a class="l-link hidden md:inline text-sm font-semibold" href="#how">Como funciona</a>
+    <a class="l-link hidden md:inline text-sm font-semibold" href="#faq">Perguntas</a>
+    <a class="l-link text-sm font-semibold text-brand-sage hover:text-brand-forest px-2" href="/" hreflang="en" lang="en">EN</a>
+    <a class="l-btn-outline" href="#waitlist">Lista de espera</a>
+  </nav>
 </header>
-<!-- END: TopNavBar -->
-<!-- BEGIN: MainContent -->
-<main class="flex-grow flex flex-col w-full max-w-screen-2xl mx-auto px-6 md:px-12">
-<!-- BEGIN: HeroSection -->
-<section class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center pt-4 pb-16 lg:pt-6" data-purpose="hero" id="waitlist">
-<!-- Hero Text Content -->
-<div class="flex flex-col space-y-8 max-w-xl">
-<div class="space-y-5">
-<p class="eyebrow font-bold uppercase text-brand-sage">A ajudar marcas premium a tornarem-se circulares &mdash; primeiro em Lisboa</p>
-<h1 class="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.1] text-brand-forest">
-            Moda premium, circular por design.
-          </h1>
-<p class="text-lg md:text-xl text-brand-sage font-medium max-w-md font-space-grotesk">
-            Peças selecionadas de marcas e boutiques premium de Lisboa, para cada evento, jantar, viagem ou dia de trabalho.
-          </p>
-</div>
-<!-- Waitlist Form -->
-<div class="flex flex-col space-y-4" data-purpose="waitlist-form">
-<form class="flex flex-col sm:flex-row gap-0 border border-brand-outline rounded-brand overflow-hidden bg-white shadow-brand-sm focus-within:ring-1 focus-within:ring-brand-forest transition-all" action="https://api.web3forms.com/submit" method="POST" aria-label="Juntar-me à lista de espera">
-<input type="hidden" name="access_key" value="1121d078-1bf1-4bf0-b3af-23e03cf6358b"/>
-<input type="hidden" name="redirect" value="/pt/success.html"/>
-<input type="hidden" name="subject" value="Nova inscrição na lista de espera LOUP"/>
-<input type="checkbox" name="botcheck" class="hidden" style="display:none"/>
-<label class="sr-only" for="hero-email">Endereço de email</label>
-<input id="hero-email" class="flex-grow px-6 py-4 border-none focus:ring-0 text-base bg-white font-space-grotesk" name="email" placeholder="Indique o seu email" required="" type="email"/>
-<button class="bg-brand-forest text-brand-ivory px-8 py-4 font-semibold hover:bg-brand-forestDeep transition-colors active:scale-95 duration-200 font-space-grotesk" type="submit">
-              Juntar-me à lista de espera
-            </button>
-</form>
-<!-- Trust Element -->
-<div class="flex items-center space-x-2 text-brand-sage text-sm px-1 font-space-grotesk">
-<svg fill="none" height="14" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="14" xmlns="http://www.w3.org/2000/svg"><rect height="11" rx="2" ry="2" width="18" x="3" y="11"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
-<span>Seja o primeiro a saber quando a LOUP abrir em Lisboa.</span>
-</div>
-</div>
-</div>
-<!-- Hero Image -->
-<div class="relative w-full aspect-[4/5] lg:aspect-square" data-purpose="hero-image-container">
-<img alt="Fotografia de moda editorial elegante, com estética calma e premium" class="w-full h-full object-cover rounded-xl-brand shadow-brand" src="/assets/images/hero.jpg"/>
-<!-- Decorative subtle icon/logo overlay -->
-<div class="absolute bottom-8 right-8 opacity-70">
-<svg fill="none" height="60" viewbox="0 0 100 100" width="60" xmlns="http://www.w3.org/2000/svg">
-<path d="M20 80C30 80 40 70 40 50C40 30 50 20 70 20" stroke="#FAF7F1" stroke-linecap="round" stroke-width="1.5"></path>
-<path d="M30 60C50 60 60 40 80 40" stroke="#FAF7F1" stroke-linecap="round" stroke-width="1.5"></path>
-</svg>
-</div>
-</div>
-</section>
-<!-- END: HeroSection -->
-<!-- BEGIN: FeatureSection -->
-<section class="py-16 border-t border-brand-outline" data-purpose="features">
-<div class="grid grid-cols-1 md:grid-cols-3 gap-12">
-<!-- Feature 1 -->
-<div class="flex flex-col items-center text-center space-y-4 px-4">
-<div class="w-12 h-12 flex items-center justify-center rounded-full bg-brand-panel text-brand-forest" data-purpose="feature-icon">
-<svg fill="none" height="22" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="22" xmlns="http://www.w3.org/2000/svg"><path d="M20.38 3.46L16 2a4 4 0 0 1-8 0L3.62 3.46a2 2 0 0 0-1.62 1.96V21a1 1 0 0 0 1 1h18a1 1 0 0 0 1-1V5.42a2 2 0 0 0-1.62-1.96z"></path><path d="M12 2v20"></path><path d="M12 7h5"></path><path d="M12 11h3"></path><path d="M12 15h4"></path></svg>
-</div>
-<div class="space-y-2">
-<h2 class="font-bold text-lg text-brand-forest">Parceiros premium verificados</h2>
-<p class="text-brand-sage text-sm leading-relaxed max-w-[240px] mx-auto font-space-grotesk">
-              Marcas e boutiques selecionadas. Sem fast fashion, sem promessas vagas de sustentabilidade.
-            </p>
-</div>
-</div>
-<!-- Feature 2 -->
-<div class="flex flex-col items-center text-center space-y-4 px-4 md:border-x border-brand-outline">
-<div class="w-12 h-12 flex items-center justify-center rounded-full bg-brand-panel text-brand-forest" data-purpose="feature-icon">
-<svg fill="none" height="22" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="22" xmlns="http://www.w3.org/2000/svg"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg>
-</div>
-<div class="space-y-2">
-<h2 class="font-bold text-lg text-brand-forest">Um guarda-roupa, todas as ocasiões</h2>
-<p class="text-brand-sage text-sm leading-relaxed max-w-[240px] mx-auto font-space-grotesk">
-              Eventos, jantares, viagens, trabalho &mdash; tudo num só lugar, cuidadosamente selecionado.
-            </p>
-</div>
-</div>
-<!-- Feature 3 -->
-<div class="flex flex-col items-center text-center space-y-4 px-4">
-<div class="w-12 h-12 flex items-center justify-center rounded-full bg-brand-panel text-brand-forest" data-purpose="feature-icon">
-<svg fill="none" height="22" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="22" xmlns="http://www.w3.org/2000/svg"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-</div>
-<div class="space-y-2">
-<h2 class="font-bold text-lg text-brand-forest">Primeiro em Lisboa</h2>
-<p class="text-brand-sage text-sm leading-relaxed max-w-[240px] mx-auto font-space-grotesk">
-              Pensada para Lisboa, a lançar aqui antes de qualquer outro lugar.
-            </p>
-</div>
-</div>
-</div>
-</section>
-<!-- END: FeatureSection -->
+
+<main id="main" class="flex-grow">
+
+  <!-- 2. Hero: narrow copy anchored low, portrait bleeding to the right edge -->
+  <section class="l-wrap l-grid" id="waitlist" aria-labelledby="hero-title">
+    <div class="l-hero-copy">
+      <p class="l-label text-brand-sage">A ajudar marcas premium a tornarem-se circulares &mdash; primeiro em Lisboa</p>
+      <h1 id="hero-title" class="l-display-lg mt-5">Moda premium, <span class="l-soft">circular por design.</span></h1>
+      <p class="l-body-lg mt-6 max-w-[48ch]">Peças selecionadas de marcas e boutiques premium de Lisboa, para cada evento, jantar, viagem ou dia de trabalho.</p>
+      <form class="l-field mt-10" action="https://api.web3forms.com/submit" method="POST" aria-label="Juntar-me à lista de espera">
+        <input type="hidden" name="access_key" value="1121d078-1bf1-4bf0-b3af-23e03cf6358b"/>
+        <input type="hidden" name="redirect" value="/pt/success.html"/>
+        <input type="hidden" name="subject" value="Nova inscrição na lista de espera LOUP"/>
+        <input type="checkbox" name="botcheck" class="hidden" style="display:none"/>
+        <label class="sr-only" for="hero-email">Endereço de email</label>
+        <input id="hero-email" name="email" placeholder="Indique o seu email" required="" type="email" autocomplete="email"/>
+        <button class="l-btn" type="submit">Juntar-me à lista de espera</button>
+      </form>
+      <p class="l-caption mt-4 flex items-center gap-2 text-brand-sage">
+        <svg aria-hidden="true" fill="none" height="14" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="14"><rect height="11" rx="2" ry="2" width="18" x="3" y="11"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+        Seja o primeiro a saber quando a LOUP abrir em Lisboa.
+      </p>
+    </div>
+    <picture class="l-hero-media block">
+      <source type="image/webp" srcset="/assets/images/hero-800.webp 800w, /assets/images/hero-1200.webp 1200w, /assets/images/hero-1600.webp 1600w" sizes="(min-width: 1024px) 58vw, 100vw"/>
+      <img class="w-full h-full object-cover object-[50%_35%]" src="/assets/images/hero-1200.jpg" width="1200" height="1500" alt="Mulher com um casaco comprido cor camelo, com cinto, de pé em degraus de pedra clara junto a uma parede de reboco" fetchpriority="high"/>
+    </picture>
+  </section>
+
+  <!-- 3. Statement -->
+  <section class="l-wrap l-grid l-beat" aria-label="A nossa abordagem">
+    <p class="l-display-md l-reveal col-span-12 md:col-start-2 md:col-span-10 max-w-[940px]">
+      Usar melhor o que já existe. <span class="l-soft">Peças premium, usadas mais vezes, por mais pessoas &mdash; a começar por Lisboa.</span>
+    </p>
+  </section>
+
+  <!-- 4. How it works: tabs over a 25/75 grid -->
+  <section class="l-wrap l-beat" id="how" aria-labelledby="how-title">
+    <div class="flex flex-col gap-2">
+      <p class="l-label text-brand-sage">Como funciona</p>
+      <h2 id="how-title" class="l-headline">As suas peças, em circulação.</h2>
+    </div>
+    <div class="l-tablist mt-10" role="tablist" aria-label="Tipo de parceiro">
+      <button class="l-tab l-label" role="tab" id="tab-brands" aria-controls="panel-brands" aria-selected="true" type="button">Para marcas</button>
+      <button class="l-tab l-label" role="tab" id="tab-boutiques" aria-controls="panel-boutiques" aria-selected="false" tabindex="-1" type="button">Para boutiques</button>
+    </div>
+    <div class="l-grid mt-10 md:mt-0">
+      <picture class="hidden md:block col-span-3 mt-6 l-reveal">
+        <source type="image/webp" srcset="/assets/images/inset-400.webp 400w, /assets/images/inset-700.webp 700w" sizes="25vw"/>
+        <img class="w-full aspect-[4/5] object-cover" src="/assets/images/inset-700.jpg" width="700" height="875" loading="lazy" alt="Um varão com roupas em tons de creme e areia em cabides de madeira, ao lado de um cato alto"/>
+      </picture>
+      <div class="col-span-12 md:col-span-9 md:pl-6 flex flex-col gap-14">
+        <div class="l-tabpanel md:pt-28" role="tabpanel" id="panel-brands" aria-labelledby="tab-brands">
+          <h3 class="l-tab-heading l-label text-brand-sage mb-6">Para marcas</h3>
+          <ol class="grid gap-10 md:grid-cols-3 md:gap-6">
+            <li>
+              <p class="l-label text-brand-sage">01</p>
+              <h4 class="l-title mt-3">Candidate-se como parceiro</h4>
+              <p class="l-body mt-3 max-w-[43ch]">Fale-nos da sua marca e das peças que gostaria de ver usadas mais vezes. Começamos com um pequeno grupo de parceiros em Lisboa.</p>
+            </li>
+            <li>
+              <p class="l-label text-brand-sage">02</p>
+              <h4 class="l-title mt-3">Selecionamos em conjunto</h4>
+              <p class="l-body mt-3 max-w-[43ch]">Escolhemos consigo as peças certas e apresentamo-las com fotografias claras, notas de tamanho e estado de conservação.</p>
+            </li>
+            <li>
+              <p class="l-label text-brand-sage">03</p>
+              <h4 class="l-title mt-3">Chegue a novos clientes</h4>
+              <p class="l-body mt-3 max-w-[43ch]">Quem aluga usa as suas peças em eventos, viagens e no trabalho &mdash; um primeiro contacto cuidado com a sua marca.</p>
+            </li>
+          </ol>
+        </div>
+        <div class="l-tabpanel md:pt-28" role="tabpanel" id="panel-boutiques" aria-labelledby="tab-boutiques" hidden>
+          <h3 class="l-tab-heading l-label text-brand-sage mb-6">Para boutiques</h3>
+          <ol class="grid gap-10 md:grid-cols-3 md:gap-6">
+            <li>
+              <p class="l-label text-brand-sage">01</p>
+              <h4 class="l-title mt-3">Partilhe a sua seleção</h4>
+              <p class="l-body mt-3 max-w-[43ch]">Escolha as peças que se adequam ao aluguer: roupa de cerimónia, casacos e peças marcantes que merecem sair mais vezes.</p>
+            </li>
+            <li>
+              <p class="l-label text-brand-sage">02</p>
+              <h4 class="l-title mt-3">Apresentadas com cuidado</h4>
+              <p class="l-body mt-3 max-w-[43ch]">Cada peça é apresentada de forma calma e consistente, ao lado de uma seleção dos melhores guarda-roupas de Lisboa.</p>
+            </li>
+            <li>
+              <p class="l-label text-brand-sage">03</p>
+              <h4 class="l-title mt-3">Traga pessoas à sua porta</h4>
+              <p class="l-body mt-3 max-w-[43ch]">Quem aluga descobre a sua loja através de peças que pode experimentar por uma noite &mdash; uma nova porta de entrada para futuros clientes.</p>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. Why LOUP: full-bleed sage block, photo flush right -->
+  <section class="l-block l-beat" aria-labelledby="why-title">
+    <div class="l-block-copy">
+      <p class="l-label">Porquê a LOUP</p>
+      <h2 id="why-title" class="sr-only">Porquê a LOUP</h2>
+      <ul class="mt-8 max-w-[560px]">
+        <li class="l-block-row">
+          <h3 class="l-title">Parceiros premium verificados</h3>
+          <p class="l-body mt-2">Marcas e boutiques selecionadas. Sem fast fashion, sem promessas vagas de sustentabilidade.</p>
+        </li>
+        <li class="l-block-row">
+          <h3 class="l-title">Um guarda-roupa, todas as ocasiões</h3>
+          <p class="l-body mt-2">Eventos, jantares, viagens, trabalho &mdash; tudo num só lugar, cuidadosamente selecionado.</p>
+        </li>
+        <li class="l-block-row">
+          <h3 class="l-title">Circular por design</h3>
+          <p class="l-body mt-2">Cada aluguer mantém uma peça bem feita em uso durante mais tempo.</p>
+        </li>
+        <li class="l-block-row">
+          <h3 class="l-title">Primeiro em Lisboa</h3>
+          <p class="l-body mt-2">Pensada para Lisboa, a lançar aqui antes de qualquer outro lugar.</p>
+        </li>
+      </ul>
+    </div>
+    <picture class="l-block-media block">
+      <source type="image/webp" srcset="/assets/images/block-720.webp 720w, /assets/images/block-1200.webp 1200w" sizes="(min-width: 1024px) 50vw, 100vw"/>
+      <img class="w-full h-full object-cover" src="/assets/images/block-1200.jpg" width="1200" height="1500" loading="lazy" alt="Interior calmo de uma boutique, com roupas em tons de creme num varão, prateleiras brancas e sandálias de pele"/>
+    </picture>
+  </section>
+
+  <!-- 6. Standards: contained panel, detail image rising from the bottom edge -->
+  <section class="l-wrap l-beat" aria-labelledby="standards-title">
+    <div class="l-panel">
+      <div class="l-panel-media hidden lg:block">
+        <picture class="block ml-auto max-w-[440px] l-reveal">
+          <source type="image/webp" srcset="/assets/images/detail-600.webp 600w, /assets/images/detail-900.webp 900w" sizes="440px"/>
+          <img class="w-full aspect-square object-cover" src="/assets/images/detail-900.jpg" width="900" height="900" loading="lazy" alt="Grande plano de uma mão a segurar um tecido de linho macio"/>
+        </picture>
+      </div>
+      <div class="px-6 py-12 md:px-12 lg:px-0 lg:pr-12 lg:pt-[72px] lg:pb-16">
+        <p class="l-label text-brand-forest">Os nossos critérios</p>
+        <h2 id="standards-title" class="l-headline mt-4">Cada peça é verificada antes de ser usada.</h2>
+        <p class="l-body mt-5 max-w-[60ch]">A qualidade é o essencial. Cada peça é revista quanto ao estado, às notas de tamanho e à apresentação antes de ser publicada, e cada aluguer é acompanhado da reserva à devolução.</p>
+        <ul class="mt-8 flex flex-col gap-3 l-body">
+          <li class="flex items-center gap-3"><span aria-hidden="true" class="w-1.5 h-1.5 rounded-full bg-brand-forest"></span>Verificação do estado</li>
+          <li class="flex items-center gap-3"><span aria-hidden="true" class="w-1.5 h-1.5 rounded-full bg-brand-forest"></span>Informação de tamanho clara</li>
+          <li class="flex items-center gap-3"><span aria-hidden="true" class="w-1.5 h-1.5 rounded-full bg-brand-forest"></span>Alugueres acompanhados</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. FAQ -->
+  <section class="l-wrap l-beat" id="faq" aria-labelledby="faq-title">
+    <div class="l-grid gap-y-8">
+      <div class="col-span-12 md:col-span-4">
+        <p class="l-label text-brand-sage">Perguntas frequentes</p>
+        <h2 id="faq-title" class="l-headline mt-2">As suas perguntas, respondidas.</h2>
+      </div>
+      <div class="l-faq col-span-12 md:col-span-8">
+        <details>
+          <summary class="l-title">O que é a LOUP?</summary>
+          <p class="l-body pb-6 max-w-[65ch]">Uma plataforma de aluguer de moda, primeiro em Lisboa, com peças de qualidade de marcas premium, designers independentes e boutiques selecionadas.</p>
+        </details>
+        <details>
+          <summary class="l-title">Quem pode ser parceiro da LOUP?</summary>
+          <p class="l-body pb-6 max-w-[65ch]">Marcas premium, designers independentes e boutiques com peças bem feitas, adequadas a eventos, viagens e trabalho. Começamos com um pequeno grupo em Lisboa.</p>
+        </details>
+        <details>
+          <summary class="l-title">Quando abre a LOUP?</summary>
+          <p class="l-body pb-6 max-w-[65ch]">Em breve, primeiro em Lisboa. Junte-se à lista de espera e será o primeiro a saber.</p>
+        </details>
+        <details>
+          <summary class="l-title">Posso juntar-me para alugar?</summary>
+          <p class="l-body pb-6 max-w-[65ch]">Sim. Os parceiros trazem as peças; quem vive em Lisboa aluga-as. Junte-se à lista de espera e entraremos em contacto quando a LOUP abrir.</p>
+        </details>
+        <details>
+          <summary class="l-title">O que acontece ao meu email?</summary>
+          <p class="l-body pb-6 max-w-[65ch]">Usamo-lo apenas para o informar sobre o lançamento e o progresso da LOUP. Leia a nossa <a class="underline" href="privacy.html">política de privacidade</a>.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. Closing waitlist (after the one double break) -->
+  <section class="l-wrap l-grid l-beat-break gap-y-8 items-start" aria-labelledby="close-title">
+    <div class="col-span-12 lg:col-span-6">
+      <h2 id="close-title" class="l-display-md l-reveal">Faça parte da LOUP <span class="l-soft">desde o primeiro dia.</span></h2>
+      <p class="l-body mt-4 text-brand-sage">Marcas, boutiques e quem quer alugar são bem-vindos.</p>
+    </div>
+    <div class="col-span-12 lg:col-start-7 lg:col-span-6 lg:pt-2">
+      <form class="l-field" action="https://api.web3forms.com/submit" method="POST" aria-label="Juntar-me à lista de espera (fim da página)">
+        <input type="hidden" name="access_key" value="1121d078-1bf1-4bf0-b3af-23e03cf6358b"/>
+        <input type="hidden" name="redirect" value="/pt/success.html"/>
+        <input type="hidden" name="subject" value="Nova inscrição na lista de espera LOUP"/>
+        <input type="checkbox" name="botcheck" class="hidden" style="display:none"/>
+        <label class="sr-only" for="close-email">Endereço de email</label>
+        <input id="close-email" name="email" placeholder="Indique o seu email" required="" type="email" autocomplete="email"/>
+        <button class="l-btn" type="submit">Juntar-me à lista de espera</button>
+      </form>
+    </div>
+  </section>
+
 </main>
-<!-- END: MainContent -->
-<!-- BEGIN: Footer -->
-<footer class="w-full border-t border-brand-outline bg-brand-forest py-14" data-purpose="main-footer">
-<div class="max-w-screen-2xl mx-auto px-6 md:px-12 flex flex-col md:flex-row justify-between items-center gap-6">
-<div class="text-xs font-bold uppercase tracking-widest text-brand-ivory font-space-grotesk" data-purpose="footer-logo">
-        LOUP. MODA CIRCULAR, PRIMEIRO EM LISBOA
+
+<!-- 9. Footer: full-bleed forest with a giant wordmark -->
+<footer class="l-footer mt-24 md:mt-32">
+  <div class="l-wrap relative z-10 pt-16 pb-[17vw] md:pt-20">
+    <div class="l-grid gap-y-10">
+      <div class="col-span-12 md:col-span-6">
+        <p class="l-label">LOUP.</p>
+        <p class="l-body mt-4 max-w-[36ch] text-brand-ivory/70">Moda circular para marcas e boutiques premium. Primeiro em Lisboa.</p>
       </div>
-<div class="flex space-x-8 text-sm text-brand-ivory/70 font-space-grotesk" data-purpose="footer-links">
-<a class="hover:text-brand-ivory transition-colors" href="privacy.html">Política de Privacidade</a>
-<a class="hover:text-brand-ivory transition-colors" href="terms.html">Termos de Serviço</a>
-<a class="hover:text-brand-ivory transition-colors" href="mailto:hello@loupfashion.pt">Contacto</a>
-</div>
-<div class="text-xs text-brand-ivory/70 font-space-grotesk" data-purpose="copyright">
-        &copy; 2026 LOUP. Todos os direitos reservados.
+      <div class="col-span-6 md:col-span-3">
+        <p class="l-label">Legal</p>
+        <ul class="mt-4 flex flex-col gap-2 l-body text-brand-ivory/70">
+          <li><a class="l-link hover:text-brand-ivory" href="privacy.html">Política de Privacidade</a></li>
+          <li><a class="l-link hover:text-brand-ivory" href="terms.html">Termos de Serviço</a></li>
+        </ul>
       </div>
-</div>
+      <div class="col-span-6 md:col-span-3">
+        <p class="l-label">Contacto</p>
+        <ul class="mt-4 flex flex-col gap-2 l-body text-brand-ivory/70">
+          <li><a class="l-link hover:text-brand-ivory" href="mailto:hello@loupfashion.pt">hello@loupfashion.pt</a></li>
+          <li><a class="l-link hover:text-brand-ivory" href="/" hreflang="en" lang="en">English</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="l-caption mt-14 text-brand-ivory/70">&copy; 2026 LOUP. Todos os direitos reservados.</p>
+  </div>
+  <div class="l-watermark" aria-hidden="true">LOUP.</div>
 </footer>
-<!-- END: Footer -->
 </body></html>
