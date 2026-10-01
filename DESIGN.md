@@ -414,8 +414,9 @@ Each section uses a different scale and shape on purpose (F+N):
 - **Hero**: the image moves **above** the copy at full content width, 4:5,
   and the waitlist field stacks with a full-width button.
 - **Display type** steps down to 36px (h1) and 28px (statement).
-- **Tabs**: the tablist is hidden and every model panel stacks under its own
-  label-caps heading, so nothing is behind a tap.
+- **Tabs** become an **accordion**: the tablist is hidden and each model is a
+  64px row (title-md name, +/− icon, `#E2DDCE` hairlines), styled like the FAQ.
+  Rental starts open and the other models closed; rows open independently.
 - **Header**: the "Circular fashion · Lisbon" descriptor is hidden below 640px.
 - **Sage block**: the image goes on top, then the rows, still full-bleed.
 - **Panel**: the detail crop is dropped, as Farfetch drops its device mock.
@@ -501,8 +502,11 @@ pill.
 ### Tabs (F)
 Label-caps text, 44px tall, sitting on a 1px `#E2DDCE` track. The active
 tab is forest with a 2px forest indicator; idle tabs are sage. There is no
-fill and no pill. Below 768px the tablist is hidden and every panel shows,
-stacked, under a label-caps heading (`.l-tab-heading`).
+fill and no pill. Below 768px the tablist is hidden and the panels become
+accordion rows: an `h3.l-tab-heading` wrapping a `button.l-acc`
+(`aria-expanded`, `aria-controls` → the steps `<ol class="l-acc-body">`).
+The first row starts open; open steps sit 8px below the row and 32px above
+the next hairline.
 
 ### Step columns
 A label-caps number ("01"), then title-md, then body-md at 43ch or less,
@@ -583,6 +587,12 @@ re-deriving it.
   Tailwind's preflight hides `[hidden]` with `!important` in the earlier
   `base` layer, and an important rule in an earlier layer beats one in
   `components`, so the mobile "show every panel" rule could never win.
+- **Mobile accordion**: `site.js` collapses every `.l-acc` row except the
+  first by adding `is-collapsed` to its list, and toggles it on click.
+  `.l-acc-body.is-collapsed` hides only below 768px and needs `!important`,
+  because the list's `grid` utility lives in the later utilities layer.
+  Without JS nothing is collapsed. The +/− icon is one shared rule for
+  `.l-faq summary::after` and `.l-acc::after`.
 - **Images**: crop with Pillow from the originals in
   `assets/images/src/` and export at hero 800/1200/1600, inset 400/700,
   block 720/1200, detail 600/900.
@@ -676,5 +686,5 @@ re-deriving it.
 > - **Motion**: links 150ms `cubic-bezier(.66,0,.2,1)`, controls 300ms
 >   `cubic-bezier(0,0,0,1)`, 16px/600ms fade-up reveals, all off under
 >   reduced motion.
-> - **Mobile**: images above copy, left-aligned, model panels stacked under
->   their own headings, full-width CTA.
+> - **Mobile**: images above copy, left-aligned, the model tabs become an
+>   FAQ-style accordion (first model open), full-width CTA.

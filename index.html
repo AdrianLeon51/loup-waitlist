@@ -305,10 +305,10 @@
         <source type="image/webp" srcset="/assets/images/inset-400.webp 400w, /assets/images/inset-700.webp 700w" sizes="25vw"/>
         <img class="w-full aspect-[4/5] object-cover" src="/assets/images/inset-700.jpg" width="700" height="875" loading="lazy" alt="A rail of cream and sand-coloured garments on wooden hangers beside a tall cactus"/>
       </picture>
-      <div class="col-span-12 md:col-span-9 md:pl-6 flex flex-col gap-14">
+      <div class="col-span-12 md:col-span-9 md:pl-6 flex flex-col md:gap-14">
         <div class="l-tabpanel md:pt-28" role="tabpanel" id="panel-rental" aria-labelledby="tab-rental">
-          <h3 class="l-tab-heading l-label text-brand-sage mb-6">Rental</h3>
-          <ol class="grid gap-10 md:grid-cols-3 md:gap-6">
+          <h3 class="l-tab-heading"><button class="l-acc l-title" type="button" aria-expanded="true" aria-controls="steps-rental">Rental</button></h3>
+          <ol id="steps-rental" class="l-acc-body grid gap-10 md:grid-cols-3 md:gap-6">
             <li>
               <p class="l-label text-brand-sage">01</p>
               <h4 class="l-title mt-3">Choose the pieces</h4>
@@ -327,8 +327,8 @@
           </ol>
         </div>
         <div class="l-tabpanel md:pt-28 is-inactive" role="tabpanel" id="panel-trial" aria-labelledby="tab-trial">
-          <h3 class="l-tab-heading l-label text-brand-sage mb-6">Try before you buy</h3>
-          <ol class="grid gap-10 md:grid-cols-3 md:gap-6">
+          <h3 class="l-tab-heading"><button class="l-acc l-title" type="button" aria-expanded="true" aria-controls="steps-trial">Try before you buy</button></h3>
+          <ol id="steps-trial" class="l-acc-body grid gap-10 md:grid-cols-3 md:gap-6">
             <li>
               <p class="l-label text-brand-sage">01</p>
               <h4 class="l-title mt-3">Offer a trial period</h4>
@@ -347,8 +347,8 @@
           </ol>
         </div>
         <div class="l-tabpanel md:pt-28 is-inactive" role="tabpanel" id="panel-resale" aria-labelledby="tab-resale">
-          <h3 class="l-tab-heading l-label text-brand-sage mb-6">Resale</h3>
-          <ol class="grid gap-10 md:grid-cols-3 md:gap-6">
+          <h3 class="l-tab-heading"><button class="l-acc l-title" type="button" aria-expanded="true" aria-controls="steps-resale">Resale</button></h3>
+          <ol id="steps-resale" class="l-acc-body grid gap-10 md:grid-cols-3 md:gap-6">
             <li>
               <p class="l-label text-brand-sage">01</p>
               <h4 class="l-title mt-3">Bring back pre-owned stock</h4>
@@ -367,8 +367,8 @@
           </ol>
         </div>
         <div class="l-tabpanel md:pt-28 is-inactive" role="tabpanel" id="panel-takeback" aria-labelledby="tab-takeback">
-          <h3 class="l-tab-heading l-label text-brand-sage mb-6">Take-back</h3>
-          <ol class="grid gap-10 md:grid-cols-3 md:gap-6">
+          <h3 class="l-tab-heading"><button class="l-acc l-title" type="button" aria-expanded="true" aria-controls="steps-takeback">Take-back</button></h3>
+          <ol id="steps-takeback" class="l-acc-body grid gap-10 md:grid-cols-3 md:gap-6">
             <li>
               <p class="l-label text-brand-sage">01</p>
               <h4 class="l-title mt-3">Invite customers back</h4>
@@ -387,8 +387,8 @@
           </ol>
         </div>
         <div class="l-tabpanel md:pt-28 is-inactive" role="tabpanel" id="panel-custom" aria-labelledby="tab-custom">
-          <h3 class="l-tab-heading l-label text-brand-sage mb-6">Your model</h3>
-          <ol class="grid gap-10 md:grid-cols-3 md:gap-6">
+          <h3 class="l-tab-heading"><button class="l-acc l-title" type="button" aria-expanded="true" aria-controls="steps-custom">Your model</button></h3>
+          <ol id="steps-custom" class="l-acc-body grid gap-10 md:grid-cols-3 md:gap-6">
             <li>
               <p class="l-label text-brand-sage">01</p>
               <h4 class="l-title mt-3">Tell us how you work</h4>

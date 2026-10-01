@@ -305,10 +305,10 @@
         <source type="image/webp" srcset="/assets/images/inset-400.webp 400w, /assets/images/inset-700.webp 700w" sizes="25vw"/>
         <img class="w-full aspect-[4/5] object-cover" src="/assets/images/inset-700.jpg" width="700" height="875" loading="lazy" alt="Um varão com roupas em tons de creme e areia em cabides de madeira, ao lado de um cato alto"/>
       </picture>
-      <div class="col-span-12 md:col-span-9 md:pl-6 flex flex-col gap-14">
+      <div class="col-span-12 md:col-span-9 md:pl-6 flex flex-col md:gap-14">
         <div class="l-tabpanel md:pt-28" role="tabpanel" id="panel-rental" aria-labelledby="tab-rental">
-          <h3 class="l-tab-heading l-label text-brand-sage mb-6">Aluguer</h3>
-          <ol class="grid gap-10 md:grid-cols-3 md:gap-6">
+          <h3 class="l-tab-heading"><button class="l-acc l-title" type="button" aria-expanded="true" aria-controls="steps-rental">Aluguer</button></h3>
+          <ol id="steps-rental" class="l-acc-body grid gap-10 md:grid-cols-3 md:gap-6">
             <li>
               <p class="l-label text-brand-sage">01</p>
               <h4 class="l-title mt-3">Escolha as peças</h4>
@@ -327,8 +327,8 @@
           </ol>
         </div>
         <div class="l-tabpanel md:pt-28 is-inactive" role="tabpanel" id="panel-trial" aria-labelledby="tab-trial">
-          <h3 class="l-tab-heading l-label text-brand-sage mb-6">Experimente antes de comprar</h3>
-          <ol class="grid gap-10 md:grid-cols-3 md:gap-6">
+          <h3 class="l-tab-heading"><button class="l-acc l-title" type="button" aria-expanded="true" aria-controls="steps-trial">Experimente antes de comprar</button></h3>
+          <ol id="steps-trial" class="l-acc-body grid gap-10 md:grid-cols-3 md:gap-6">
             <li>
               <p class="l-label text-brand-sage">01</p>
               <h4 class="l-title mt-3">Ofereça um período de experiência</h4>
@@ -347,8 +347,8 @@
           </ol>
         </div>
         <div class="l-tabpanel md:pt-28 is-inactive" role="tabpanel" id="panel-resale" aria-labelledby="tab-resale">
-          <h3 class="l-tab-heading l-label text-brand-sage mb-6">Revenda</h3>
-          <ol class="grid gap-10 md:grid-cols-3 md:gap-6">
+          <h3 class="l-tab-heading"><button class="l-acc l-title" type="button" aria-expanded="true" aria-controls="steps-resale">Revenda</button></h3>
+          <ol id="steps-resale" class="l-acc-body grid gap-10 md:grid-cols-3 md:gap-6">
             <li>
               <p class="l-label text-brand-sage">01</p>
               <h4 class="l-title mt-3">Traga o stock usado</h4>
@@ -367,8 +367,8 @@
           </ol>
         </div>
         <div class="l-tabpanel md:pt-28 is-inactive" role="tabpanel" id="panel-takeback" aria-labelledby="tab-takeback">
-          <h3 class="l-tab-heading l-label text-brand-sage mb-6">Recolha</h3>
-          <ol class="grid gap-10 md:grid-cols-3 md:gap-6">
+          <h3 class="l-tab-heading"><button class="l-acc l-title" type="button" aria-expanded="true" aria-controls="steps-takeback">Recolha</button></h3>
+          <ol id="steps-takeback" class="l-acc-body grid gap-10 md:grid-cols-3 md:gap-6">
             <li>
               <p class="l-label text-brand-sage">01</p>
               <h4 class="l-title mt-3">Convide os clientes a regressar</h4>
@@ -387,8 +387,8 @@
           </ol>
         </div>
         <div class="l-tabpanel md:pt-28 is-inactive" role="tabpanel" id="panel-custom" aria-labelledby="tab-custom">
-          <h3 class="l-tab-heading l-label text-brand-sage mb-6">O seu modelo</h3>
-          <ol class="grid gap-10 md:grid-cols-3 md:gap-6">
+          <h3 class="l-tab-heading"><button class="l-acc l-title" type="button" aria-expanded="true" aria-controls="steps-custom">O seu modelo</button></h3>
+          <ol id="steps-custom" class="l-acc-body grid gap-10 md:grid-cols-3 md:gap-6">
             <li>
               <p class="l-label text-brand-sage">01</p>
               <h4 class="l-title mt-3">Conte-nos como trabalha</h4>

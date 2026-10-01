@@ -155,7 +155,7 @@
   .l-btn:hover { background: var(--color-brand-forestDeep); border-color: var(--color-brand-forestDeep); }
   .l-btn-outline { height: 40px; padding-inline: 20px; background: transparent; color: var(--color-brand-forest); }
   .l-btn-outline:hover { background: var(--color-brand-forest); color: var(--color-brand-ivory); }
-  .l-btn:focus-visible, .l-btn-outline:focus-visible, .l-link:focus-visible, .l-tab:focus-visible, .l-faq summary:focus-visible {
+  .l-btn:focus-visible, .l-btn-outline:focus-visible, .l-link:focus-visible, .l-tab:focus-visible, .l-faq summary:focus-visible, .l-acc:focus-visible {
     outline: 2px solid var(--color-brand-forest);
     outline-offset: 3px;
   }
@@ -245,14 +245,33 @@
     }
   }
 
-  /* --- tabs (desktop) → stacked panels (mobile) --------------------------- */
+  /* --- tabs (desktop) → accordion rows (mobile) --------------------------- */
   .l-tablist { display: none; }
-  .l-tab-heading { display: block; }
-  /* Mobile shows every panel stacked; only desktop hides inactive ones.
+  .l-tab-heading { display: block; border-top: 1px solid var(--color-brand-outline); }
+  .l-tabpanel:last-child { border-bottom: 1px solid var(--color-brand-outline); }
+  .l-acc {
+    width: 100%;
+    min-height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    text-align: left;
+    cursor: pointer;
+  }
+  .l-acc-body { padding: 8px 0 32px; }
+  /* Collapsing is mobile-only and only ever applied by site.js, so content is never stuck hidden.
+     !important because the list's `grid` utility sits in the later utilities layer. */
+  @media (width < 48rem) {
+    .l-acc-body.is-collapsed { display: none !important; }
+  }
+  /* Mobile shows every panel as an accordion row; only desktop hides inactive ones.
      (A class, not [hidden]: preflight's [hidden] !important can't be overridden from this layer.) */
   @media (width >= 48rem) {
     .l-tablist { display: flex; gap: 32px; border-bottom: 1px solid var(--color-brand-outline); }
     .l-tab-heading { display: none; }
+    .l-tabpanel:last-child { border-bottom: 0; }
+    .l-acc-body { padding: 0; }
     .l-tabpanel.is-inactive { display: none; }
   }
   .l-tab {
@@ -306,7 +325,8 @@
     list-style: none;
   }
   .l-faq summary::-webkit-details-marker { display: none; }
-  .l-faq summary::after {
+  /* +/− icon shared by FAQ rows and the mobile model accordion */
+  .l-faq summary::after, .l-acc::after {
     content: "";
     flex: none;
     width: 14px;
@@ -316,7 +336,7 @@
       linear-gradient(currentColor, currentColor) center / 1.5px 14px no-repeat;
     transition: transform 300ms var(--ease-control);
   }
-  .l-faq details[open] summary::after { transform: rotate(45deg); }
+  .l-faq details[open] summary::after, .l-acc[aria-expanded="true"]::after { transform: rotate(45deg); }
 
   /* --- footer watermark --------------------------------------------------- */
   .l-footer { position: relative; overflow: hidden; background: var(--color-brand-forest); color: var(--color-brand-ivory); }
@@ -360,5 +380,6 @@
     .js .l-reveal { opacity: 1; transform: none; transition: none; }
     .l-header { transition: none; }
     .l-header.is-hidden { transform: none; }
+    .l-faq summary::after, .l-acc::after { transition: none; }
   }
 }

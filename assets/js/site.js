@@ -69,4 +69,18 @@
       });
     });
   });
+
+  // Mobile accordion for the same panels: the first row starts open, the rest closed.
+  // `is-collapsed` only hides below 768px (see .l-acc-body in src/input.css).
+  var accs = Array.prototype.slice.call(document.querySelectorAll('.l-acc'));
+  var setOpen = function (btn, open) {
+    btn.setAttribute('aria-expanded', String(open));
+    document.getElementById(btn.getAttribute('aria-controls')).classList.toggle('is-collapsed', !open);
+  };
+  accs.forEach(function (btn, i) {
+    setOpen(btn, i === 0);
+    btn.addEventListener('click', function () {
+      setOpen(btn, btn.getAttribute('aria-expanded') !== 'true');
+    });
+  });
 })();
