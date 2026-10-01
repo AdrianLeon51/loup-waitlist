@@ -416,7 +416,8 @@ Each section uses a different scale and shape on purpose (F+N):
 - **Display type** steps down to 36px (h1) and 28px (statement).
 - **Tabs** become an **accordion**: the tablist is hidden and each model is a
   64px row (title-md name, +/− icon, `#E2DDCE` hairlines), styled like the FAQ.
-  Rental starts open and the other models closed; rows open independently.
+  Rental starts open and the other models closed; only one model is open at a
+  time, so opening a row closes the others.
 - **Header**: the "Circular fashion · Lisbon" descriptor is hidden below 640px.
 - **Sage block**: the image goes on top, then the rows, still full-bleed.
 - **Panel**: the detail crop is dropped, as Farfetch drops its device mock.
@@ -588,7 +589,9 @@ re-deriving it.
   `base` layer, and an important rule in an earlier layer beats one in
   `components`, so the mobile "show every panel" rule could never win.
 - **Mobile accordion**: `site.js` collapses every `.l-acc` row except the
-  first by adding `is-collapsed` to its list, and toggles it on click.
+  first by adding `is-collapsed` to its list. Opening a row closes the others
+  (one open at a time); if that pulls the tapped row above the header, the
+  page scrolls it back to 96px from the top.
   `.l-acc-body.is-collapsed` hides only below 768px and needs `!important`,
   because the list's `grid` utility lives in the later utilities layer.
   Without JS nothing is collapsed. The +/− icon is one shared rule for

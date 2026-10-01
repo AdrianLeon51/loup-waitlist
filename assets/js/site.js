@@ -70,7 +70,7 @@
     });
   });
 
-  // Mobile accordion for the same panels: the first row starts open, the rest closed.
+  // Mobile accordion for the same panels: one model open at a time, the first to start with.
   // `is-collapsed` only hides below 768px (see .l-acc-body in src/input.css).
   var accs = Array.prototype.slice.call(document.querySelectorAll('.l-acc'));
   var setOpen = function (btn, open) {
@@ -80,7 +80,14 @@
   accs.forEach(function (btn, i) {
     setOpen(btn, i === 0);
     btn.addEventListener('click', function () {
-      setOpen(btn, btn.getAttribute('aria-expanded') !== 'true');
+      var open = btn.getAttribute('aria-expanded') !== 'true';
+      if (open) {
+        accs.forEach(function (other) { if (other !== btn) setOpen(other, false); });
+      }
+      setOpen(btn, open);
+      // Closing a taller row above can push this one off-screen; bring it back below the header.
+      var top = btn.getBoundingClientRect().top;
+      if (top < 96) window.scrollBy(0, top - 96);
     });
   });
 })();
